@@ -1,0 +1,48 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import Dashboard from './Components/Dashboard/Dashboard';
+import Login from './Components/Authentication/Login';
+import ForgetPassword from './Components/Authentication/ForgetPassword';
+import ChangePassword from './Components/Authentication/ChangePassword';
+import ResetSuccess from './Components/Authentication/ResetSuccess';
+import Profile from './Components/User/Profile';
+import WhatsNew from './Components/WhatsNew/WhatsNew';
+import Sidebar from './Components/Layouts/Sidebar';
+import HomepageBanner from './Components/HomepageBanners/HomepageBanner';
+import Products from './Components/ManageProducts/Products';
+
+function App() {
+
+  const user = useSelector((state) => state.authReducer.authData)
+
+  return (
+    <>
+      <Router>
+        <div>
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+
+            {/* Auth Routes */}
+            <Route path='/login' element={<Login />} />
+            <Route path='/forget-password' element={<ForgetPassword />} />
+            <Route path='/change-password' element={<ChangePassword />} />
+            <Route path='/reset-success' element={<ResetSuccess />} />
+
+            {/* SideBar Routes */}
+            <Route path='/whats-new' element={<WhatsNew />} />
+            <Route path='/hompage-banner' element={<HomepageBanner />} />
+            <Route path='/users' element={<Sidebar />} />
+            <Route path='/manage-products' element={<Products />} />
+            <Route path='/manage-orders' element={<Dashboard />} />
+            <Route path='/chat' element={<Dashboard />} />
+
+            {/* User Routes */}
+            <Route path='/profile' element={<Profile />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
+  );
+}
+
+export default App;
