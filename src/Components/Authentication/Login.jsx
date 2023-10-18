@@ -52,33 +52,21 @@ const Login = () => {
             <Toaster position="top-right" reverseOrder={false} />
             {!user && <div className="nk-body bg-white npc-default pg-auth">
                 <div className="nk-app-root">
-                    {/* main @s */}
-                    <div className="nk-main ">
-                        {/* wrap @s */}
-                        <div className="nk-wrap nk-wrap-nosidebar">
-                            {/* content @s */}
-                            <div className="nk-content ">
-                                <div className="nk-block nk-block-middle nk-auth-body  wide-xs">
-                                    <div className="brand-logo pb-4 text-center">
-                                        <a href="/" className="logo-link">
-                                            <img className="logo-light logo-img logo-img-lg" src="./images/logo.png" srcSet="./images/logo2x.png 2x" alt="logo" />
-                                            <img className="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcSet="./images/logo-dark2x.png 2x" alt="logo-dark" />
-                                        </a>
-                                    </div>
+                    <div className="loginSection">
+                        <div className="container">
+                            <div className="row align-items-center justify-content-center">
+                                <div className="col-md-6">
                                     <div className="card">
                                         <div className="card-inner card-inner-lg">
                                             <div className="nk-block-head">
                                                 <div className="nk-block-head-content">
-                                                    <h4 className="nk-block-title">Sign-In</h4>
-                                                    <div className="nk-block-des">
-                                                        <p>Access admin panel using your email and passcode.</p>
-                                                    </div>
+                                                    <h4 className="nk-block-title">Please login to your dashboard</h4>
                                                 </div>
                                             </div>
                                             <form onSubmit={loginForm.handleSubmit}>
                                                 <div className="form-group">
                                                     <div className="form-label-group">
-                                                        <label className="form-label" htmlFor="default-01">Email</label>
+                                                        <label className="form-label" htmlFor="default-01">Email Address</label>
                                                     </div>
                                                     <div className="form-control-wrap">
                                                         <input
@@ -93,15 +81,10 @@ const Login = () => {
                                                             <div className="invalid-feedback" style={{ display: "block" }}>{loginForm.errors.email}</div> : ''}
                                                     </div>
                                                 </div>
+
                                                 <div className="form-group">
                                                     <div className="form-label-group">
-                                                        <label className="form-label" htmlFor="password">Passcode</label>
-                                                        <Link
-                                                            to={'/forget-password'}
-                                                            className="link link-primary link-sm"
-                                                            role='button'
-                                                        >Forgot Code?
-                                                        </Link>
+                                                        <label className="form-label" htmlFor="password">Password</label>
                                                     </div>
                                                     <div className="form-control-wrap">
                                                         <a onClick={() => setToggle(!toggle)} className="form-icon form-icon-right passcode-switch lg" data-target="password">
@@ -113,13 +96,26 @@ const Login = () => {
                                                             {...loginForm.getFieldProps("password")}
                                                             className="form-control form-control-lg"
                                                             id="password"
-                                                            placeholder="Enter your passcode"
+                                                            placeholder="Type your password here"
                                                         />
                                                         {loginForm.touched.password && loginForm.errors.password ?
                                                             <div className="invalid-feedback" style={{ display: "block" }}>{loginForm.errors.password}</div> : ''}
                                                     </div>
+                                                    <div className="form-label-group mt-3">
+
+                                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="com-email-1" />
+                                                            <label class="custom-control-label" for="com-email-1">Remember me?</label>
+                                                        </div>
+                                                        <Link
+                                                            to={'/forget-password'}
+                                                            className="link link-primary link-sm greyColor"
+                                                            role='button'
+                                                        >Forgot Passowrd ?
+                                                        </Link>
+                                                    </div>
                                                 </div>
-                                                <div className="form-group justify-center">
+                                                <div className="form-group justify-center mt-5">
                                                     {spinnerLoading
                                                         ? <Oval
                                                             height="40"
@@ -131,17 +127,46 @@ const Login = () => {
                                                             strokeWidthSecondary={4}
                                                             visible={spinnerLoading}
                                                         />
-                                                        : <button type="submit" className="btn btn-lg btn-primary btn-block">Sign in</button>
+                                                        : <button type="submit" className="btn btn-lg btn-primary btn-block">Login</button>
                                                     }
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div className="col-md-6">
+                                    <div className="LoginBoxBlue">
+                                        <div className="brand-logo pb-4 text-center">
+                                            <a href="" className="logo-link">
+                                                <img className="logo-light logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo" />
+                                                <img className="logo-dark logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo-dark" />
+                                            </a>
+                                        </div>
+                                        <div className="loginTextBlueBox">
+                                            <h2>Explore What’s new</h2>
+                                            <h6>Get the latest updates on new products and deals!</h6>
+                                        </div>
+                                        <div className="loginTextBlueBox">
+                                            <h2>Enter The Store</h2>
+                                            <h6>Check out the entire store!</h6>
+                                        </div>
+                                        <div className="loginTextBlueBox">
+                                            <h2>Discount</h2>
+                                            <h6>Get exclusive deals on select products!</h6>
+                                        </div>
+                                        <img className="" src="images/wavebtm-img.png" alt="waveimg" />
+
+                                    </div>
+                                </div>
+
+
+
+
                             </div>
-                            {/* wrap @e */}
                         </div>
-                        {/* content @e */}
+
                     </div>
                     {/* main @e */}
                 </div>

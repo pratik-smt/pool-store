@@ -24,30 +24,7 @@
 * 07. PREVIEWS
 ---------------------- **/
 /** 01. FONTS */
-@font-face {
-  font-family: "DM Sans";
-  src: url("../fonts/DMSans-Bold.eot");
-  src: local("DM Sans Bold"), local("DMSans-Bold"), url("../fonts/DMSans-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff"), url("../fonts/DMSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("../fonts/DMSans-Medium.eot");
-  src: local("DM Sans Medium"), local("DMSans-Medium"), url("../fonts/DMSans-Medium.eot#iefix") format("embedded-opentype"), url("../fonts/DMSans-Medium.woff2") format("woff2"), url("../fonts/DMSans-Medium.woff") format("woff"), url("../fonts/DMSans-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("../fonts/DMSans-Regular.eot");
-  src: local("DM Sans Regular"), local("DMSans-Regular"), url("../fonts/DMSans-Regular.eot#iefix") format("embedded-opentype"), url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff"), url("../fonts/DMSans-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Quicksand:wght@300;400;500;600;700&display=swap');
 /** Bootstrap v5.3.0 */
 /*!
  * Bootstrap  v5.3.0 (https://getbootstrap.com/)
@@ -125,10 +102,10 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: "DM Sans", sans-serif;
+  --bs-font-sans-serif: 'Nunito Sans', sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: "DM Sans", sans-serif;
+  --bs-body-font-family: 'Nunito Sans', sans-serif;
   --bs-body-font-size: 0.875rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.65;
@@ -146,7 +123,7 @@
   --bs-tertiary-color-rgb: 82, 100, 132;
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
-  --bs-heading-color: #364a63;
+  --bs-heading-color: #000000;
   --bs-link-color: #014EAD;
   --bs-link-color-rgb: 0, 62, 139;
   --bs-link-decoration: none;
@@ -281,7 +258,7 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 700;
   line-height: 1.1;
   color: var(--bs-heading-color);
@@ -320,6 +297,7 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 abbr[title] {
@@ -2500,11 +2478,12 @@ div.dataTables_wrapper div.dataTables_filter input[type=file]:not(:disabled):not
 .form-control:focus,
 .dual-listbox .dual-listbox__search:focus,
 div.dataTables_wrapper div.dataTables_filter input:focus {
-  color: #3c4d62;
-  background-color: #fff;
-  border-color: #014ead;
-  outline: 0;
-  box-shadow: 0 0 0 3px rgba(133, 79, 255, 0.1);
+    color: #3c4d62;
+    background-color: #fff;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+    border-bottom: 4px solid #54E28D;
 }
 
 .form-control::-webkit-date-and-time-value,
@@ -18971,8 +18950,8 @@ div.dataTables_wrapper div.dataTables_filter .form-info+input {
 
 .form-label {
   font-size: 0.875rem;
-  font-weight: 500;
-  color: #344357;
+  font-weight: 700;
+  color: #263A43;
   margin-bottom: 0.5rem;
 }
 
@@ -34712,15 +34691,14 @@ body.nav-shown {
 }
 
 .logo-img {
-  max-height: 36px;
+  max-height: 150px;
 }
 
 .logo-img-lg {
-  max-height: 60px;
+  max-height: 150px;
 }
-
 .logo-img-sm {
-  max-height: 28px;
+  max-height: 150px;
 }
 
 .logo-img-icon {
@@ -50712,5 +50690,42 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   background-color: #014ead !important;
   border-color: #014ead !important;
 }
+
+
+
+/* Nirmal Custom CSS */
+
+.loginSection {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 30px 0px;
+}
+.greyColor {
+  color:#8E8E8E !important;
+}
+.LoginBoxBlue {
+  background-color: #004BA7;
+  border:3px solid #004BA7;
+  border-radius: 5px;
+  padding: 0px;
+  text-align: center;
+}
+.loginTextBlueBox{
+  margin-bottom: 40px;
+}
+.loginTextBlueBox h2 {
+  font-size:26px;
+  font-weight:600;
+  margin-top: 0px;
+  color:#fff;
+}
+.loginTextBlueBox h6 {
+  font-size:16px;
+  font-weight:500;
+  margin-top: 0px;
+  color:#fff;
+}
+
 
 /*! END @iO */

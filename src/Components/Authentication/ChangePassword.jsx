@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Oval } from 'react-loader-spinner'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import webLogo from '../../images/poolStoreLogo.avif'
@@ -47,18 +47,14 @@ const ChangePassword = () => {
             <Toaster position="top-right" reverseOrder={false} />
             <div className="nk-body bg-white npc-default pg-auth">
                 <div className="nk-app-root">
-                    {/* main @s */}
-                    <div className="nk-main ">
-                        {/* wrap @s */}
-                        <div className="nk-wrap nk-wrap-nosidebar">
-                            {/* content @s */}
-                            <div className="nk-content ">
-                                <div className="nk-block nk-block-middle nk-auth-body  wide-xs">
-                                    <div className="brand-logo text-center">
-                                        <img className="" src={webLogo} alt="logo" />
-                                    </div>
+
+                    <div className="loginSection">
+                        <div className="container">
+                            <div className="row align-items-center justify-content-center">
+                                <div className="col-md-6">
                                     <div className="card">
                                         <div className="card-inner card-inner-lg">
+
                                             <div className="nk-block-head">
                                                 <div className="nk-block-head-content">
                                                     <h5 className="nk-block-title">Change password</h5>
@@ -68,6 +64,7 @@ const ChangePassword = () => {
 
                                                 </div>
                                             </div>
+
                                             <form onSubmit={resetPassForm.handleSubmit}>
                                                 <div className="form-group">
                                                     <div className="form-label-group">
@@ -120,12 +117,38 @@ const ChangePassword = () => {
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div className="col-md-6">
+                                    <div className="LoginBoxBlue">
+                                        <div className="brand-logo pb-4 text-center">
+                                            <a href="" className="logo-link">
+                                                <img className="logo-light logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo" />
+                                                <img className="logo-dark logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo-dark" />
+                                            </a>
+                                        </div>
+                                        <div className="loginTextBlueBox">
+                                            <h2>Explore What’s new</h2>
+                                            <h6>Get the latest updates on new products and deals!</h6>
+                                        </div>
+                                        <div className="loginTextBlueBox">
+                                            <h2>Enter The Store</h2>
+                                            <h6>Check out the entire store!</h6>
+                                        </div>
+                                        <div className="loginTextBlueBox">
+                                            <h2>Discount</h2>
+                                            <h6>Get exclusive deals on select products!</h6>
+                                        </div>
+                                        <img className="" src="./images/wavebtm-img.png" alt="waveimg" />
+
+                                    </div>
+                                </div>
+
                             </div>
-                            {/* wrap @e */}
                         </div>
-                        {/* content @e */}
+
                     </div>
-                    {/* main @e */}
+
                 </div>
             </div>
 
