@@ -25,109 +25,19 @@ const Dashboard = () => {
                                     <div className="nk-block-head nk-block-head-sm">
                                         <div className="nk-block-between">
                                             <div className="nk-block-head-content">
-                                                <h4 className="nk-block-title page-title">Dashboard</h4>
+                                                <h4 className="nk-block-title page-title">Home / <span>The Pool Store</span></h4>
                                             </div>{/* .nk-block-head-content */}
                                         </div>{/* .nk-block-between */}
                                     </div>{/* .nk-block-head */}
                                     <div className="nk-block">
                                         <div className="row g-gs">
-                                            <div className="col-xxl-4 col-md-6">
-                                                <div className="card is-dark h-100">
-                                                    <div className="nk-ecwg nk-ecwg1">
-                                                        <div className="card-inner">
-                                                            <div className="card-title-group">
-                                                                <div className="card-title">
-                                                                    <h6 className="title">Total Sales</h6>
-                                                                </div>
-                                                                <div className="card-tools">
-                                                                    <a href="#" className="link">View Report</a>
-                                                                </div>
-                                                            </div>
-                                                            <div className="data">
-                                                                <div className="amount">$74,958.49</div>
-                                                                <div className="info"><strong>$7,395.37</strong> in last month</div>
-                                                            </div>
-                                                            <div className="data">
-                                                                <h6 className="sub-title">This week so far</h6>
-                                                                <div className="data-group">
-                                                                    <div className="amount">$1,338.72</div>
-                                                                    <div className="info text-end"><span className="change up text-danger"><em className="icon ni ni-arrow-long-up" />4.63%</span><br /><span>vs. last week</span></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>{/* .card-inner */}
-                                                        <div className="nk-ck-wrap mt-auto overflow-hidden rounded-bottom">
-                                                            <div className="nk-ecwg1-ck">
-                                                                <canvas className="ecommerce-line-chart-s1" id="totalSales" />
-                                                            </div>
-                                                        </div>
-                                                    </div>{/* .nk-ecwg */}
-                                                </div>{/* .card */}
-                                            </div>{/* .col */}
-                                            <div className="col-xxl-4 col-md-6">
-                                                <div className="card h-100">
-                                                    <div className="nk-ecwg nk-ecwg2">
-                                                        <div className="card-inner">
-                                                            <div className="card-title-group mt-n1">
-                                                                <div className="card-title">
-                                                                    <h6 className="title">Averarge order</h6>
-                                                                </div>
-                                                                <div className="card-tools me-n1">
-                                                                    <div className="dropdown">
-                                                                        <a href="#" className="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em className="icon ni ni-more-h" /></a>
-                                                                        <div className="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                                                            <ul className="link-list-opt no-bdr">
-                                                                                <li><a href="#" className="active"><span>15 Days</span></a></li>
-                                                                                <li><a href="#"><span>30 Days</span></a></li>
-                                                                                <li><a href="#"><span>3 Months</span></a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="data">
-                                                                <div className="data-group">
-                                                                    <div className="amount">$463.35</div>
-                                                                    <div className="info text-end"><span className="change up text-danger"><em className="icon ni ni-arrow-long-up" />4.63%</span><br /><span>vs. last week</span></div>
-                                                                </div>
-                                                            </div>
-                                                            <h6 className="sub-title">Orders over time</h6>
-                                                        </div>{/* .card-inner */}
-                                                        <div className="nk-ecwg2-ck">
-                                                            <canvas className="ecommerce-bar-chart-s1" id="averargeOrder" />
-                                                        </div>
-                                                    </div>{/* .nk-ecwg */}
-                                                </div>{/* .card */}
-                                            </div>{/* .col */}
-                                            <div className="col-xxl-4">
+                                            <div className="col-md-7">
                                                 <div className="row g-gs">
-                                                    <div className="col-xxl-12 col-md-6">
-                                                        <div className="card">
-                                                            <div className="nk-ecwg nk-ecwg3">
-                                                                <div className="card-inner pb-2">
-                                                                    <div className="card-title-group">
-                                                                        <div className="card-title">
-                                                                            <h6 className="title">Orders</h6>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="data">
-                                                                        <div className="data-group">
-                                                                            <div className="amount">329</div>
-                                                                            <div className="info text-end"><span className="change up text-danger"><em className="icon ni ni-arrow-long-up" />4.63%</span><br /><span>vs. last week</span></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>{/* .card-inner */}
-                                                                <div className="nk-ck-wrap mt-auto overflow-hidden rounded-bottom">
-                                                                    <div className="nk-ecwg3-ck">
-                                                                        <canvas className="ecommerce-line-chart-s1" id="totalOrders" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>{/* .nk-ecwg */}
-                                                        </div>{/* .card */}
-                                                    </div>{/* .col */}
-                                                    <div className="col-xxl-12 col-md-6">
-                                                        <div className="card">
-                                                            <div className="nk-ecwg nk-ecwg3">
-                                                                <div className="card-inner pb-2">
+
+                                                    <div className="col-xxl-3 col-sm-4">
+                                                        <div className="card chartOne">
+                                                            <div className="nk-ecwg nk-ecwg6">
+                                                                <div className="card-inner">
                                                                     <div className="card-title-group">
                                                                         <div className="card-title">
                                                                             <h6 className="title">Customers</h6>
@@ -135,400 +45,356 @@ const Dashboard = () => {
                                                                     </div>
                                                                     <div className="data">
                                                                         <div className="data-group">
-                                                                            <div className="amount">194</div>
-                                                                            <div className="info text-end"><span className="change up text-danger"><em className="icon ni ni-arrow-long-up" />4.63%</span><br /><span>vs. last week</span></div>
+                                                                            <div className="amount">3,781</div>
+                                                                            <div className="nk-ecwg6-ck">
+                                                                                <span className="change up text-grey">+5.27% <em className="icon ni ni-trend-up"></em></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-xxl-3 col-sm-4">
+                                                        <div className="card chartOneWhite">
+                                                            <div className="nk-ecwg nk-ecwg6">
+                                                                <div className="card-inner">
+                                                                    <div className="card-title-group">
+                                                                        <div className="card-title">
+                                                                            <h6 className="title">Orders</h6>
                                                                         </div>
                                                                     </div>
-                                                                </div>{/* .card-inner */}
-                                                                <div className="nk-ck-wrap mt-auto overflow-hidden rounded-bottom">
-                                                                    <div className="nk-ecwg3-ck">
-                                                                        <canvas className="ecommerce-line-chart-s1" id="totalCustomers" />
+                                                                    <div className="data">
+                                                                        <div className="data-group">
+                                                                            <div className="amount">3,219</div>
+                                                                            <div className="nk-ecwg6-ck">
+                                                                                <span className="change up fontsize text-grey">+1.78% <em className="icon ni ni-trend-up"></em></span>
+                                                                            </div>
+                                                                        </div>
+
                                                                     </div>
                                                                 </div>
-                                                            </div>{/* .nk-ecwg */}
-                                                        </div>{/* .card */}
-                                                    </div>{/* .col */}
-                                                </div>{/* .row */}
-                                            </div>{/* .col */}
-                                            <div className="col-xxl-8">
-                                                <div className="card card-full">
-                                                    <div className="card-inner">
-                                                        <div className="card-title-group">
-                                                            <div className="card-title">
-                                                                <h6 className="title">Recent Orders</h6>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="nk-tb-list mt-n2">
-                                                        <div className="nk-tb-item nk-tb-head">
-                                                            <div className="nk-tb-col"><span>Order No.</span></div>
-                                                            <div className="nk-tb-col tb-col-sm"><span>Customer</span></div>
-                                                            <div className="nk-tb-col tb-col-md"><span>Date</span></div>
-                                                            <div className="nk-tb-col"><span>Amount</span></div>
-                                                            <div className="nk-tb-col"><span className="d-none d-sm-inline">Status</span></div>
-                                                        </div>
-                                                        <div className="nk-tb-item">
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-lead"><a href="#">#95954</a></span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-sm">
-                                                                <div className="user-card">
-                                                                    <div className="user-avatar sm bg-purple-dim">
-                                                                        <span>AB</span>
+                                                    <div className="col-xxl-3 col-sm-4">
+                                                        <div className="card chartOneWhite">
+                                                            <div className="nk-ecwg nk-ecwg6">
+                                                                <div className="card-inner">
+                                                                    <div className="card-title-group">
+                                                                        <div className="card-title">
+                                                                            <h6 className="title">Orders</h6>
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="user-name">
-                                                                        <span className="tb-lead">Abu Bin Ishtiyak</span>
+                                                                    <div className="data">
+                                                                        <div className="data-group">
+                                                                            <div className="amount">3,219</div>
+                                                                            <div className="nk-ecwg6-ck">
+                                                                                <span className="change up fontsize text-grey">+1.78% <em className="icon ni ni-trend-up"></em></span>
+                                                                            </div>
+                                                                        </div>
+
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-md">
-                                                                <span className="tb-sub">02/11/2020</span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-sub tb-amount">4,596.75 <span>USD</span></span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="badge badge-dot badge-dot-xs bg-success">Paid</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="nk-tb-item">
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-lead"><a href="#">#95850</a></span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-sm">
-                                                                <div className="user-card">
-                                                                    <div className="user-avatar sm bg-azure-dim">
-                                                                        <span>DE</span>
-                                                                    </div>
-                                                                    <div className="user-name">
-                                                                        <span className="tb-lead">Desiree Edwards</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-md">
-                                                                <span className="tb-sub">02/02/2020</span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-sub tb-amount">596.75 <span>USD</span></span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="badge badge-dot badge-dot-xs bg-danger">Canceled</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="nk-tb-item">
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-lead"><a href="#">#95812</a></span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-sm">
-                                                                <div className="user-card">
-                                                                    <div className="user-avatar sm bg-warning-dim">
-                                                                        <img src="./images/avatar/b-sm.jpg" alt="" />
-                                                                    </div>
-                                                                    <div className="user-name">
-                                                                        <span className="tb-lead">Blanca Schultz</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-md">
-                                                                <span className="tb-sub">02/01/2020</span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-sub tb-amount">199.99 <span>USD</span></span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="badge badge-dot badge-dot-xs bg-success">Paid</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="nk-tb-item">
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-lead"><a href="#">#95256</a></span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-sm">
-                                                                <div className="user-card">
-                                                                    <div className="user-avatar sm bg-purple-dim">
-                                                                        <span>NL</span>
-                                                                    </div>
-                                                                    <div className="user-name">
-                                                                        <span className="tb-lead">Naomi Lawrence</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-md">
-                                                                <span className="tb-sub">01/29/2020</span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-sub tb-amount">1099.99 <span>USD</span></span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="badge badge-dot badge-dot-xs bg-success">Paid</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="nk-tb-item">
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-lead"><a href="#">#95135</a></span>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-sm">
-                                                                <div className="user-card">
-                                                                    <div className="user-avatar sm bg-success-dim">
-                                                                        <span>CH</span>
-                                                                    </div>
-                                                                    <div className="user-name">
-                                                                        <span className="tb-lead">Cassandra Hogan</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="nk-tb-col tb-col-md">
-                                                                <span className="tb-sub">01/29/2020</span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="tb-sub tb-amount">1099.99 <span>USD</span></span>
-                                                            </div>
-                                                            <div className="nk-tb-col">
-                                                                <span className="badge badge-dot badge-dot-xs bg-warning">Due</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>{/* .card */}
+                                                    <div className="col-xxl-3 col-sm-4">
+                                                        <div className="card chartOneWhite">
+                                                            <div className="nk-ecwg nk-ecwg6">
+                                                                <div className="card-inner">
+                                                                    <div className="card-title-group">
+                                                                        <div className="card-title">
+                                                                            <h6 className="title">Revenue</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="data">
+                                                                        <div className="data-group">
+                                                                            <div className="amount">$695</div>
+                                                                            <div className="nk-ecwg6-ck">
+                                                                                <span className="change up fontsize text-grey">-0.56% <em className="icon ni ni-trend-down"></em></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-xxl-3 col-sm-4">
+                                                        <div className="card chartOnegrey">
+                                                            <div className="nk-ecwg nk-ecwg6">
+                                                                <div className="card-inner">
+                                                                    <div className="card-title-group">
+                                                                        <div className="card-title">
+                                                                            <h6 className="title">Growth</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="data">
+                                                                        <div className="data-group">
+                                                                            <div className="amount">30.1%</div>
+                                                                            <div className="nk-ecwg6-ck">
+                                                                                <span className="change up fontsize text-grey">+1.48% <em className="icon ni ni-trend-up"></em></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-xxl-3 col-sm-4">
+                                                        <div className="card chartOnegrey">
+                                                            <div className="nk-ecwg nk-ecwg6">
+                                                                <div className="card-inner">
+                                                                    <div className="card-title-group">
+                                                                        <div className="card-title">
+                                                                            <h6 className="title">Growth</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="data">
+                                                                        <div className="data-group">
+                                                                            <div className="amount">30.1%</div>
+                                                                            <div className="nk-ecwg6-ck">
+                                                                                <span className="change up fontsize text-grey">+1.48% <em className="icon ni ni-trend-up"></em></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
                                             </div>
-                                            <div className="col-xxl-4 col-md-6">
-                                                <div className="card h-100">
+                                            <div className="col-md-5">
+                                                <div className="card chartOneWhite">
                                                     <div className="card-inner">
-                                                        <div className="card-title-group mb-2">
-                                                            <div className="card-title">
-                                                                <h6 className="title">Top products</h6>
+                                                        <h6>Total Leads</h6>
+                                                        {/* Chart Design */}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>{/* .row */}
+                                    </div>{/* .nk-block */}
+
+
+
+
+                                    <div className="nk-block">
+                                        <div className="row g-gs">
+                                            <div className="col-md-7">
+                                                <div className="card revenueBoxColor">
+                                                    <div className="card-inner">
+                                                        <div class="card-title-group mt-n1 mb-3">
+                                                            <div className="revenurTitlerow">
+                                                                <h5 className="rLine">Revenue</h5>
+                                                                <span className="currentWeek"><em className="icon ni ni-dot"></em> Current Week $58,211</span>
+                                                                <span className="previousWeek"> <em className="icon ni ni-dot"></em>Previous Week $68,768</span>
                                                             </div>
-                                                            <div className="card-tools">
+                                                            <div className="card-tools me-n1">
                                                                 <div className="dropdown">
-                                                                    <a href="#" className="dropdown-toggle link link-light link-sm dropdown-indicator" data-bs-toggle="dropdown">Weekly</a>
+                                                                    <a href="#" className="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <em className="icon ni ni-more-h"></em></a>
                                                                     <div className="dropdown-menu dropdown-menu-sm dropdown-menu-end">
                                                                         <ul className="link-list-opt no-bdr">
-                                                                            <li><a href="#"><span>Daily</span></a></li>
-                                                                            <li><a href="#" className="active"><span>Weekly</span></a></li>
-                                                                            <li><a href="#"><span>Monthly</span></a></li>
-                                                                        </ul>
+                                                                            <li><a href="#" className="active"><span>15 Days</span></a></li>
+                                                                            <li><a href="#"><span>30 Days</span></a></li>
+                                                                            <li><a href="#"><span>3 Months</span></a></li></ul>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <ul className="nk-top-products">
-                                                            <li className="item">
-                                                                <div className="thumb">
-                                                                    <img src="./images/product/a.png" alt="" />
+                                                    </div>
+                                                    {/* Chart Start here Design */}
+
+
+                                                </div>
+                                            </div>
+                                            <div className="col-md-5">
+                                                <div className="row g-gs">
+                                                    <div className="col-md-12">
+                                                        <div className="card chartOneWhite">
+                                                            <div className="card-inner">
+                                                                <h6>Revenue by Location</h6>
+                                                                <div className="project-progress">
+                                                                    <div className="project-progress-details">
+                                                                        <div className="project-progress-task"><span>New York</span></div>
+                                                                        <div className="project-progress-percent">72K</div>
+                                                                    </div>
+                                                                    <div className="progress progress-pill progress-md bg-light progress-md-Revnue"><div className="progress-bar fillRevnue" data-progress="93.5"></div>
+                                                                    </div>
                                                                 </div>
-                                                                <div className="info">
-                                                                    <div className="title">Pink Fitness Tracker</div>
-                                                                    <div className="price">$99.00</div>
+                                                                <div className="project-progress">
+                                                                    <div className="project-progress-details">
+                                                                        <div className="project-progress-task"><span>San Francisco</span></div>
+                                                                        <div className="project-progress-percent">39K</div>
+                                                                    </div>
+                                                                    <div className="progress progress-pill progress-md bg-light progress-md-Revnue"><div className="progress-bar fillRevnue" data-progress="93.5"></div>
+                                                                    </div>
                                                                 </div>
-                                                                <div className="total">
-                                                                    <div className="amount">$990.00</div>
-                                                                    <div className="count">10 Sold</div>
+                                                                <div className="project-progress">
+                                                                    <div className="project-progress-details">
+                                                                        <div className="project-progress-task"><span>Sydney
+                                                                        </span></div>
+                                                                        <div className="project-progress-percent">25K</div>
+                                                                    </div>
+                                                                    <div className="progress progress-pill progress-md bg-light progress-md-Revnue"><div className="progress-bar fillRevnue" data-progress="93.5"></div>
+                                                                    </div>
                                                                 </div>
-                                                            </li>
-                                                            <li className="item">
-                                                                <div className="thumb">
-                                                                    <img src="./images/product/b.png" alt="" />
-                                                                </div>
-                                                                <div className="info">
-                                                                    <div className="title">Purple Smartwatch</div>
-                                                                    <div className="price">$99.00</div>
-                                                                </div>
-                                                                <div className="total">
-                                                                    <div className="amount">$990.00</div>
-                                                                    <div className="count">10 Sold</div>
-                                                                </div>
-                                                            </li>
-                                                            <li className="item">
-                                                                <div className="thumb">
-                                                                    <img src="./images/product/c.png" alt="" />
-                                                                </div>
-                                                                <div className="info">
-                                                                    <div className="title">Black Mi Band Smartwatch</div>
-                                                                    <div className="price">$99.00</div>
-                                                                </div>
-                                                                <div className="total">
-                                                                    <div className="amount">$990.00</div>
-                                                                    <div className="count">10 Sold</div>
-                                                                </div>
-                                                            </li>
-                                                            <li className="item">
-                                                                <div className="thumb">
-                                                                    <img src="./images/product/d.png" alt="" />
-                                                                </div>
-                                                                <div className="info">
-                                                                    <div className="title">Black Headphones</div>
-                                                                    <div className="price">$99.00</div>
-                                                                </div>
-                                                                <div className="total">
-                                                                    <div className="amount">$990.00</div>
-                                                                    <div className="count">10 Sold</div>
-                                                                </div>
-                                                            </li>
-                                                            <li className="item">
-                                                                <div className="thumb">
-                                                                    <img src="./images/product/e.png" alt="" />
-                                                                </div>
-                                                                <div className="info">
-                                                                    <div className="title">iPhone 7 Headphones</div>
-                                                                    <div className="price">$99.00</div>
-                                                                </div>
-                                                                <div className="total">
-                                                                    <div className="amount">$990.00</div>
-                                                                    <div className="count">10 Sold</div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>{/* .card-inner */}
-                                                </div>{/* .card */}
-                                            </div>{/* .col */}
-                                            <div className="col-xxl-3 col-md-6">
-                                                <div className="card h-100">
-                                                    <div className="card-inner">
-                                                        <div className="card-title-group mb-2">
-                                                            <div className="card-title">
-                                                                <h6 className="title">Store Statistics</h6>
                                                             </div>
                                                         </div>
-                                                        <ul className="nk-store-statistics">
-                                                            <li className="item">
-                                                                <div className="info">
-                                                                    <div className="title">Orders</div>
-                                                                    <div className="count">1,795</div>
+                                                    </div>
+                                                    <div className="col-md-12">
+                                                        <div className="card chartOneWhite">
+                                                            <div className="card-inner circleChartFlex">
+                                                                <div className="revenuChartLocation">
+                                                                    <h6>Revenue by Location</h6>
+                                                                    <ul class="nk-ecwg4-legends pt-0">
+                                                                        <li><div class="title"><span class="dot dot-lg sq" data-bg="#9cabff"></span><span>Direct Search</span></div><div class="amount amount-xs">$300.56</div></li>
+                                                                        <li><div class="title"><span class="dot dot-lg sq" data-bg="#ffa9ce"></span><span>Affilliate</span></div><div class="amount amount-xs">$135.18</div></li>
+                                                                        <li><div class="title"><span class="dot dot-lg sq" data-bg="#b8acff"></span><span>E-mail</span></div><div class="amount amount-xs">$48.96</div></li>
+                                                                    </ul>
                                                                 </div>
-                                                                <em className="icon bg-primary-dim ni ni-bag" />
-                                                            </li>
-                                                            <li className="item">
-                                                                <div className="info">
-                                                                    <div className="title">Customers</div>
-                                                                    <div className="count">2,327</div>
+                                                                <div className="circleChartSmall">
+                                                                    <img className="" src="./images/circlechart.png" alt="user-avatar" />
                                                                 </div>
-                                                                <em className="icon bg-info-dim ni ni-users" />
-                                                            </li>
-                                                            <li className="item">
-                                                                <div className="info">
-                                                                    <div className="title">Products</div>
-                                                                    <div className="count">674</div>
-                                                                </div>
-                                                                <em className="icon bg-pink-dim ni ni-box" />
-                                                            </li>
-                                                            <li className="item">
-                                                                <div className="info">
-                                                                    <div className="title">Categories</div>
-                                                                    <div className="count">68</div>
-                                                                </div>
-                                                                <em className="icon bg-purple-dim ni ni-server" />
-                                                            </li>
-                                                        </ul>
-                                                    </div>{/* .card-inner */}
-                                                </div>{/* .card */}
-                                            </div>{/* .col */}
-                                            <div className="col-xxl-5 col-lg-6">
-                                                <div className="card card-full overflow-hidden">
-                                                    <div className="nk-ecwg nk-ecwg4 h-100">
-                                                        <div className="card-inner flex-grow-1">
-                                                            <div className="card-title-group mb-4">
-                                                                <div className="card-title">
-                                                                    <h6 className="title">Traffic Sources</h6>
-                                                                </div>
-                                                                <div className="card-tools">
-                                                                    <div className="dropdown">
-                                                                        <a href="#" className="dropdown-toggle link link-light link-sm dropdown-indicator" data-bs-toggle="dropdown">30 Days</a>
-                                                                        <div className="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                                                            <ul className="link-list-opt no-bdr">
-                                                                                <li><a href="#"><span>15 Days</span></a></li>
-                                                                                <li><a href="#" className="active"><span>30 Days</span></a></li>
-                                                                                <li><a href="#"><span>3 Months</span></a></li>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>{/* .row */}
+                                    </div>{/* .nk-block */}
+
+
+
+
+                                    <div className="nk-block">
+                                        <div className="row g-gs">
+                                            <div className="col-md-6">
+                                                <div className="circleChartFlex">
+                                                    <div className="">
+                                                        <span>Ecommerce activity</span>
+                                                        <h6>Top selling products</h6>
+                                                    </div>
+
+                                                    <div class="drodown">
+                                                        <a href="#" class="dropdown-toggle btn btn-outline-light btn-white" data-bs-toggle="dropdown" aria-expanded="false">Filter
+                                                            <em class="icon ni ni-filter-alt"></em></a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <ul class="link-list-opt no-bdr">
+                                                                <li><a href="#"><span>- Price Low to high</span></a></li>
+                                                                <li><a href="#"><span>- Price High to Low</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-6">
+                                                <div className="form-control-wrap searchBarTable">
+                                                    <div className="form-icon form-icon-right">
+                                                        <em className="icon ni ni-search"></em></div>
+                                                    <input type="text" className="form-control" id="fv-email" name="fv-email" placeholder='Search Here...' />
+                                                </div>
+                                            </div>
+
+                                        </div>{/* .row */}
+
+                                        <div className="row g-gs">
+                                            <div className="col-md-12">
+                                                <div className="card card-preview">
+                                                    <table className="table table-orders mt-3">
+                                                        <thead className="tb-odr-head dashboardTableHead">
+                                                            <tr className="tb-odr-item">
+                                                                <th className="tb-odr-info"><span className="tb-odr-id">Product name</span></th>
+
+                                                                <th className="tb-odr-info"><span className="tb-odr-date d-none d-md-inline-block">Price</span></th>
+
+                                                                <th className="tb-odr-amount"><span className="tb-odr-total">Quantity</span></th>
+
+                                                                <th className="tb-odr-amount"><span className="tb-odr-status d-md-inline-block">Amount</span></th>
+
+                                                                <th className="tb-odr-action">&nbsp;</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody className="tb-odr-body">
+                                                            <tr className="tb-odr-item">
+                                                                <td className="tb-odr-info">Chlorine & Shock</td>
+                                                                <td className="tb-odr-amount">$150.00</td>
+                                                                <td className="tb-odr-amount"> 125</td>
+                                                                <td className="tb-odr-amount">$150.00</td>
+                                                                <td class="tb-odr-action">
+                                                                    <div class="dropdown">
+                                                                        <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em class="icon ni ni-more-v"></em></a>
+                                                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xs">
+                                                                            <ul class="link-list-plain">
+                                                                                <li><a href="#" class="text-primary">Edit</a></li>
+                                                                                <li><a href="#" class="text-primary">View</a></li>
+                                                                                <li><a href="#" class="text-danger">Remove</a></li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="data-group">
-                                                                <div className="nk-ecwg4-ck">
-                                                                    <canvas className="ecommerce-doughnut-s1" id="trafficSources" />
-                                                                </div>
-                                                                <ul className="nk-ecwg4-legends">
-                                                                    <li>
-                                                                        <div className="title">
-                                                                            <span className="dot dot-lg sq" data-bg="#9cabff" />
-                                                                            <span>Organic Search</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr className="tb-odr-item">
+                                                                <td className="tb-odr-info">Chlorine & Shock</td>
+                                                                <td className="tb-odr-amount">$150.00</td>
+                                                                <td className="tb-odr-amount"> 125</td>
+                                                                <td className="tb-odr-amount">$150.00</td>
+                                                                <td class="tb-odr-action">
+                                                                    <div class="dropdown">
+                                                                        <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em class="icon ni ni-more-v"></em></a>
+                                                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xs">
+                                                                            <ul class="link-list-plain">
+                                                                                <li><a href="#" class="text-primary">Edit</a></li>
+                                                                                <li><a href="#" class="text-primary">View</a></li>
+                                                                                <li><a href="#" class="text-danger">Remove</a></li>
+                                                                            </ul>
                                                                         </div>
-                                                                        <div className="amount amount-xs">4,305</div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div className="title">
-                                                                            <span className="dot dot-lg sq" data-bg="#ffa9ce" />
-                                                                            <span>Referrals</span>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr className="tb-odr-item">
+                                                                <td className="tb-odr-info">Chlorine & Shock</td>
+                                                                <td className="tb-odr-amount">$150.00</td>
+                                                                <td className="tb-odr-amount"> 125</td>
+                                                                <td className="tb-odr-amount">$150.00</td>
+                                                                <td class="tb-odr-action">
+                                                                    <div class="dropdown">
+                                                                        <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em class="icon ni ni-more-v"></em></a>
+                                                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xs">
+                                                                            <ul class="link-list-plain">
+                                                                                <li><a href="#" class="text-primary">Edit</a></li>
+                                                                                <li><a href="#" class="text-primary">View</a></li>
+                                                                                <li><a href="#" class="text-danger">Remove</a></li>
+                                                                            </ul>
                                                                         </div>
-                                                                        <div className="amount amount-xs">482</div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div className="title">
-                                                                            <span className="dot dot-lg sq" data-bg="#b8acff" />
-                                                                            <span>Social Media</span>
-                                                                        </div>
-                                                                        <div className="amount amount-xs">859</div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div className="title">
-                                                                            <span className="dot dot-lg sq" data-bg="#f9db7b" />
-                                                                            <span>Others</span>
-                                                                        </div>
-                                                                        <div className="amount amount-xs">138</div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>{/* .card-inner */}
-                                                        <div className="card-inner card-inner-md bg-light">
-                                                            <div className="card-note">
-                                                                <em className="icon ni ni-info-fill" />
-                                                                <span>Traffic channels have beed generating the most traffics over past days.</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>{/* .card */}
-                                            </div>{/* .col */}
-                                            <div className="col-xxl-4 col-lg-6">
-                                                <div className="card h-100">
-                                                    <div className="nk-ecwg nk-ecwg5">
-                                                        <div className="card-inner">
-                                                            <div className="card-title-group align-start pb-3 g-2">
-                                                                <div className="card-title">
-                                                                    <h6 className="title">Store Visitors</h6>
-                                                                </div>
-                                                                <div className="card-tools">
-                                                                    <em className="card-hint icon ni ni-help" data-bs-toggle="tooltip" data-bs-placement="left" title="Users of this month" />
-                                                                </div>
-                                                            </div>
-                                                            <div className="data-group">
-                                                                <div className="data">
-                                                                    <div className="title">Monthly</div>
-                                                                    <div className="amount amount-sm">9.28K</div>
-                                                                    <div className="change up"><em className="icon ni ni-arrow-long-up" />4.63%</div>
-                                                                </div>
-                                                                <div className="data">
-                                                                    <div className="title">Weekly</div>
-                                                                    <div className="amount amount-sm">2.69K</div>
-                                                                    <div className="change down"><em className="icon ni ni-arrow-long-down" />1.92%</div>
-                                                                </div>
-                                                                <div className="data">
-                                                                    <div className="title">Daily (Avg)</div>
-                                                                    <div className="amount amount-sm">0.94K</div>
-                                                                    <div className="change up"><em className="icon ni ni-arrow-long-up" />3.45%</div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="nk-ecwg5-ck">
-                                                                <canvas className="ecommerce-line-chart-s4" id="storeVisitors" />
-                                                            </div>
-                                                            <div className="chart-label-group">
-                                                                <div className="chart-label">01 Jul, 2020</div>
-                                                                <div className="chart-label">30 Jul, 2020</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>{/* .card */}
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>{/* .row */}
+
+
+
                                     </div>{/* .nk-block */}
+
+
+
+
+
                                 </div>
                             </div>
                         </div>

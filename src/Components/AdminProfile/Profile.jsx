@@ -135,7 +135,6 @@ const Profile = () => {
         }
     })
 
-    let avatar = user.data.avatar.replaceAll("localhost", "192.168.29.203")
 
     return (
         <>
@@ -230,7 +229,7 @@ const Profile = () => {
                                                                 <div className="user-card">
                                                                     <div className="user-avatar bg-primary">
                                                                         {user.data.avatar
-                                                                            ? <img className="" src={avatar} alt="user-avatar" />
+                                                                            ? <img className="" src={user.data.avatar} alt="user-avatar" />
                                                                             : <em className="icon ni ni-user-alt" />
                                                                         }
                                                                     </div>

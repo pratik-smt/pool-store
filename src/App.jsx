@@ -5,11 +5,13 @@ import Login from './Components/Authentication/Login';
 import ForgetPassword from './Components/Authentication/ForgetPassword';
 import ChangePassword from './Components/Authentication/ChangePassword';
 import ResetSuccess from './Components/Authentication/ResetSuccess';
-import Profile from './Components/User/Profile';
+import Profile from './Components/AdminProfile/Profile';
 import WhatsNew from './Components/WhatsNew/WhatsNew';
 import Sidebar from './Components/Layouts/Sidebar';
 import HomepageBanner from './Components/HomepageBanners/HomepageBanner';
 import Products from './Components/ManageProducts/Products';
+import ManageOrders from './Components/ManageOrders/ManageOrders';
+import CustomerDatabase from './Components/CustomerDatabase/CustomerDatabase';
 
 function App() {
 
@@ -31,9 +33,9 @@ function App() {
             {/* SideBar Routes */}
             <Route path='/whats-new' element={<WhatsNew />} />
             <Route path='/hompage-banner' element={<HomepageBanner />} />
-            <Route path='/users' element={<Sidebar />} />
+            <Route path='/customer-database' element={<CustomerDatabase />} />
             <Route path='/manage-products' element={<Products />} />
-            <Route path='/manage-orders' element={<Dashboard />} />
+            <Route path='/manage-orders' element={<ManageOrders />} />
             <Route path='/chat' element={<Dashboard />} />
 
             {/* User Routes */}

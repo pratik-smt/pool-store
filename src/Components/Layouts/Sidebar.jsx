@@ -43,7 +43,7 @@ const Sidebar = () => {
                             <li className="nk-menu-item">
                                 <Link to={"/users"} className="nk-menu-link">
                                     <span className="nk-menu-icon"><em className="icon ni ni-user-group-fill" /></span>
-                                    <span className="nk-menu-text">Users</span>
+                                    <span className="nk-menu-text">Customer Database</span>
                                 </Link>
                             </li>
                             <li className="nk-menu-item">

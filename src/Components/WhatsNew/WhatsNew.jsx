@@ -18,7 +18,9 @@ const WhatsNew = () => {
     const navigate = useNavigate()
     const imageRef = useRef(null)
     const user = useSelector((state) => state.authReducer.authData)
+
     const authToken = useSelector((state) => state.authReducer.token)
+
     const [spinnerLoading, setSpinnerLoading] = useState(false)
     const [btnLoading, setBtnLoading] = useState(false)
     const [addWhatsNewModal, setAddWhatsNewModal] = useState(false)
@@ -210,417 +212,156 @@ const WhatsNew = () => {
                                 visible={true}
                             />
                         </div>
-                        : <div className="nk-content mt-5 ">
+                        :
+                        <div className="nk-content">
                             <div className="container-fluid">
                                 <div className="nk-content-inner">
                                     <div className="nk-content-body">
                                         <div className="nk-block-head nk-block-head-sm">
                                             <div className="nk-block-between">
                                                 <div className="nk-block-head-content">
-                                                    <h3 className="nk-block-title page-title">Products</h3>
+                                                    <h4 className="nk-block-title page-title">The Pool Store /
+                                                        <span>What’s New</span>
+                                                    </h4>
                                                 </div>{/* .nk-block-head-content */}
-                                                <div className="nk-block-head-content">
-                                                    <div className="toggle-wrap nk-block-tools-toggle">
-                                                        <a href="#" className="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em className="icon ni ni-more-v" /></a>
-                                                        <div className="toggle-expand-content" data-content="pageMenu">
-                                                            <ul className="nk-block-tools g-3">
-                                                                <li className="nk-block-tools-opt">
-                                                                    <a onClick={e => setAddWhatsNewModal(true)} data-target="addProduct" className="toggle btn btn-icon btn-primary d-md-none active"><em className="icon ni ni-plus" /></a>
-                                                                    <a onClick={e => setAddWhatsNewModal(true)} data-target="addProduct" className="btn btn-primary"><em className="icon ni ni-plus" /><span>Add What's New</span></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            </div>{/* .nk-block-between */}
+                                        </div>{/* .nk-block-head */}
+
 
                                         <div className="nk-block">
-                                            <div className="card">
-                                                <div className="card-inner-group">
-                                                    <div className="card-inner p-0">
-                                                        <div className="nk-tb-list">
-                                                            {/* Table Heads */}
-                                                            <div className="nk-tb-item nk-tb-head">
-                                                                <div className="nk-tb-col tb-col-sm"><span>Date</span></div>
-                                                                <div className="nk-tb-col w-40"><span>Post</span></div>
-                                                                <div className="nk-tb-col"><span>Reach</span></div>
-                                                                <div className="nk-tb-col"><span>Likes</span></div>
-                                                                <div className="nk-tb-col"><span>Shares</span></div>
-                                                                <div className="nk-tb-col"><span>Comments</span></div>
-                                                                <div className="nk-tb-col"><span>Action</span></div>
-                                                            </div>
-                                                            {/* Table Items */}
-                                                            {whatsNewData.length > 0
-                                                                && whatsNewData.map((data) => {
-                                                                    return <div key={data.id} className="nk-tb-item">
-                                                                        <div className="nk-tb-col">
-                                                                            <span className="tb-sub">{moment(data.created_at).format("DD-MM-YYYY")}</span>
-                                                                        </div>
-                                                                        <div className="nk-tb-col tb-col-sm w-40">
-                                                                            <div className="tb-product">
-                                                                                <img src={data.image_icon.replaceAll("localhost", "192.168.29.203")} alt="" className="thumb" />
-                                                                                <div className='d-flex flex-column'>
-                                                                                    <span className="title">{data.title}{data.is_default && <span style={{ lineHeight: "1.1rem", fontSize: "10px", position: "relative", bottom: "12px", right: "2px" }} className="badge rounded-pill bg-success">Default</span>}</span>
-                                                                                    <span className="tb-lead">{data.sub_title}</span>
-                                                                                    <span className="tb-lead">
-                                                                                        <span dangerouslySetInnerHTML={{ __html: data.description }} />
-                                                                                        {/* {data.description} */}
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div className="nk-tb-col">
-                                                                            <span className="tb-sub">{data.reach ? data.reach : 0}</span>
-                                                                        </div>
-                                                                        <div className="nk-tb-col">
-                                                                            <span className="tb-sub">{data.like ? data.like : 0}</span>
-                                                                        </div>
-                                                                        <div className="nk-tb-col">
-                                                                            <span className="tb-sub">{data.share ? data.share : 0}</span>
-                                                                        </div>
-                                                                        <div className="nk-tb-col tb-col-md">
-                                                                            <span className="tb-sub">{data.comment ? data.comment : 0}</span>
-                                                                        </div>
-                                                                        <div className="nk-tb-col nk-tb-col-tools">
-                                                                            <ul className="nk-tb-actions justify-content-between gx-1 my-n1">
-                                                                                <li className="me-n1">
-                                                                                    <div className="dropdown">
-                                                                                        <a href="#" className="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em className="icon ni ni-more-h" /></a>
-                                                                                        <div className="dropdown-menu dropdown-menu-end">
-                                                                                            <ul className="link-list-opt no-bdr">
-                                                                                                <li>
-                                                                                                    <a
-                                                                                                        role='button'
-                                                                                                        onClick={e => {
-                                                                                                            setPostImage(data.image_icon.replaceAll("localhost", "192.168.29.203"))
-                                                                                                            editWhatsNewForm.setFieldValue("post_id", data.id);
-                                                                                                            editWhatsNewForm.setFieldValue("title", data.title);
-                                                                                                            editWhatsNewForm.setFieldValue("description", data.description);
-                                                                                                            editWhatsNewForm.setFieldValue("is_default", data.is_default);
-                                                                                                            editWhatsNewForm.setFieldValue("image", data.image_icon);
-                                                                                                            setEditWhatsNewModal(true)
-                                                                                                        }}
-                                                                                                    >
-                                                                                                        <em className="icon ni ni-edit" />
-                                                                                                        <span>Edit Post</span>
-                                                                                                    </a>
-                                                                                                </li>
+                                            <div className="row g-gs">
+                                                <div className="col-md-6">
+                                                    <div className="circleChartFlex">
+                                                        <div className="">
+                                                            <span>Posts activity</span>
+                                                            <h6>Showing 10 rows</h6>
+                                                        </div>
 
-                                                                                                <li><a role='button' onClick={e => handleDeleteWhatsNew(e, data.id)} className='text-danger'><em className="icon ni ni-trash" /><span>Delete Post</span></a></li>
-                                                                                                {/* <li><a role='button' onClick={e => handleDeleteWhatsNew(data.id)} className='text-danger'><em className="icon ni ni-trash" /><span>Delete Post</span></a></li> */}
-                                                                                            </ul>
+                                                        <div className="d-flex">
+                                                            <a href="" className="thiryday">30 Days</a>
+                                                            <div className="drodown">
+                                                                <a href="#" className="dropdown-toggle btn btn-outline-light btn-white filterBnt" data-bs-toggle="dropdown" aria-expanded="false">Filter
+                                                                    <em className="icon ni ni-filter-alt"></em></a>
+                                                                <div className="dropdown-menu dropdown-menu-end">
+                                                                    <ul className="link-list-opt no-bdr">
+                                                                        <li><a href="#"><span>- Price Low to high</span></a></li>
+                                                                        <li><a href="#"><span>- Price High to Low</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div className="form-control-wrap searchBarTable">
+                                                        <div className="form-icon form-icon-right">
+                                                            <em className="icon ni ni-search"></em></div>
+                                                        <input type="text" className="form-control" id="fv-email" name="fv-email" placeholder='Search Here...' />
+                                                    </div>
+                                                </div>
+
+                                            </div>{/* .row */}
+                                        </div>
+
+
+
+                                        <div className="nk-block">
+                                            <div className="row g-gs">
+                                                <div className="col-md-10">
+                                                    <ul className="nav nav-tabs mt-n3 brBtmNone" role="tablist">
+                                                        <li className="nav-item" role="presentation"><a className="nav-link active" data-bs-toggle="tab" href="#tabItem1" aria-selected="true" role="tab">Active Posts <span className="tableTabsSpan"> 23</span></a></li>
+                                                        <li className="nav-item" role="presentation"><a className="nav-link" data-bs-toggle="tab" href="#tabItem2" aria-selected="false" role="tab" tabindex="-1">Posts Expired <span className="tableTabsSpan"> 14</span></a></li>
+                                                        <li className="nav-item" role="presentation"><a className="nav-link" data-bs-toggle="tab" href="#tabItem3" aria-selected="false" role="tab" tabindex="-1">Unfinished <span className="tableTabsSpan"> 35</span></a></li>
+
+                                                    </ul>
+                                                </div>
+                                                <div className="col-md-2"><a href="#" className="btn btn-primary lightBlue d-md-inline-flex fRight">Add New Post</a></div>
+
+                                                <div className="col-md-12">
+                                                    <div className="tab-content">
+                                                        <div className="tab-pane active show" id="tabItem1" role="tabpanel">
+                                                            <div className="card card-preview">
+                                                                <table className="table table-orders mt-3">
+                                                                    <thead className="tb-odr-head dashboardTableHead">
+                                                                        <tr className="tb-odr-item">
+                                                                            <th className="tb-odr-info">
+                                                                                <span className="tb-odr-id">Date</span></th>
+
+                                                                            <th className="tb-odr-info">
+                                                                                <span className="tb-odr-date">Post</span></th>
+
+                                                                            <th className="tb-odr-amount"><span className="tb-odr-total">Likes </span></th>
+
+                                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Views</span></th>
+
+                                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Shares</span></th>
+
+                                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Comments</span></th>
+
+                                                                            <th className="tb-odr-amount"><span className="tb-odr-status">Actions</span></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody className="tb-odr-body whatSnewTable">
+                                                                        {whatsNewData.length > 0 &&
+                                                                            whatsNewData.map(data => {
+                                                                                return <tr className="tb-odr-item">
+                                                                                    <td className="tb-odr-info">{moment(data.created_at).format("YYYY-MM-DD")}</td>
+                                                                                    <td className="tb-odr-info tableImageUser">
+                                                                                        <div className="user-card">
+                                                                                            <div className="user-avatar user-avatar-sm bg-warning">
+                                                                                                <img src="../images/tableimg.png" alt="" />
+                                                                                            </div>
+                                                                                            <div className="user-name">
+                                                                                                <span className="tb-lead text-gray">{data.title}</span>
+                                                                                                <p><small className='text-gray'>Buy stabilized chlorinator from our store now at discounted price!!</small></p>
+                                                                                            </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                })
+                                                                                    </td>
+                                                                                    <td className="tb-odr-info"> 125</td>
+                                                                                    <td className="tb-odr-info">125</td>
+                                                                                    <td className="tb-odr-info">125</td>
+                                                                                    <td className="tb-odr-info">125</td>
+                                                                                    <td className="tb-odr-info">
+                                                                                        <a className="text-soft btn btn-icon">
+                                                                                            <em className="icon ni ni-eye"></em>
+                                                                                        </a>
+                                                                                        <a className="text-soft btn btn-icon">
+                                                                                            <em className="icon ni ni-edit"></em>
+                                                                                        </a>
+                                                                                        <a className="text-soft btn btn-icon">
+                                                                                            <em className="icon ni ni-trash-empty"></em>
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            })
+                                                                        }
+                                                                    </tbody>
+                                                                </table>
+
+                                                            </div>
+                                                            {whatsNewData.length == 0 &&
+                                                                <div className='d-flex justify-content-center align-item-center mt-5'>
+                                                                    <tr>
+                                                                        <span>No Data Available</span>
+                                                                    </tr>
+                                                                </div>
                                                             }
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {whatsNewData.length == 0
-                                            && <div className='mt-5 d-flex justify-content-center align-item-center'>
-                                                <h6>No Data Available</h6>
-                                            </div>
-                                        }
-                                        {/* Add What's New Modal */}
-                                        <div className={addWhatsNewModal ? "modal fade show d-block " : "modal fade"} id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div className="modal-dialog">
-                                                <div className="modal-content">
-                                                    <div className="modal-header">
-                                                        <h1 className="modal-title fs-5" id="exampleModalLabel">Add What's New Post</h1>
-                                                        <button type="button" onClick={e => setAddWhatsNewModal(false)} className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                                                    </div>
-                                                    <div className="modal-body">
-
-                                                        <div className="nk-block">
-                                                            <form onSubmit={addWhatsNewForm.handleSubmit}>
-                                                                <div className="row g-3">
-                                                                    <div className="col-12">
-                                                                        <div className="form-group">
-                                                                            <label className="form-label" htmlFor="product-title">Post Title</label>
-                                                                            <div className="form-control-wrap">
-                                                                                <input
-                                                                                    type="text"
-                                                                                    name='title'
-                                                                                    {...addWhatsNewForm.getFieldProps("title")}
-                                                                                    className="form-control"
-                                                                                    id="title"
-                                                                                />
-                                                                                {addWhatsNewForm.touched.title && addWhatsNewForm.errors.title
-                                                                                    ?
-                                                                                    <div className="invalid-feedback" style={{ display: "block" }}>{addWhatsNewForm.errors.title}</div>
-                                                                                    : ''
-                                                                                }
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div className="col-12">
-                                                                        <div className="form-group">
-                                                                            <label className="form-label" htmlFor="product-description">Post Description</label>
-                                                                            <CKEditor
-                                                                                editor={ClassicEditor}
-                                                                                data={addWhatsNewForm.values.description}
-                                                                                onChange={(event, editor) => {
-                                                                                    const data = editor.getData()
-                                                                                    addWhatsNewForm.setFieldValue("description", data)
-                                                                                }}
-                                                                            />
-                                                                            {addWhatsNewForm.touched.description && addWhatsNewForm.errors.description
-                                                                                ?
-                                                                                <div className="invalid-feedback" style={{ display: "block" }}>{addWhatsNewForm.errors.description}</div>
-                                                                                : ''
-                                                                            }
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div className="col-md-12">
-                                                                        <div className="form-group">
-                                                                            <label className="form-label" htmlFor="regular-price">Post Type</label>
-                                                                            <div className="input-group">
-                                                                                <select
-                                                                                    name="is_default"
-                                                                                    {...addWhatsNewForm.getFieldProps("is_default")}
-                                                                                    className="form-control mb-0"
-                                                                                >
-                                                                                    <option>-- Select Post Visibility --</option>
-                                                                                    <option value='true'>Default</option>
-                                                                                    <option value='false'>Time Limited</option>
-                                                                                </select>
-                                                                                {addWhatsNewForm.touched.is_default && addWhatsNewForm.errors.is_default
-                                                                                    ?
-                                                                                    <div className="invalid-feedback" style={{ display: "block" }}>{addWhatsNewForm.errors.is_default}</div>
-                                                                                    : ''
-                                                                                }
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="col-12">
-                                                                        <div className="form-group ">
-                                                                            <label className="form-label" htmlFor="product-image">Post Image</label>
-                                                                            {postImage
-                                                                                ? <div className='d-flex'>
-                                                                                    <img style={{ width: "200px" }} src={postImage} alt="" />
-                                                                                    <span
-                                                                                        className='preview-icon-wrap'
-                                                                                        style={{ position: "relative", right: "10px", bottom: "10px", cursor: "pointer" }}
-                                                                                        ref={imageRef}
-                                                                                        onClick={e => { setPostImage(""); addWhatsNewForm.setFieldValue("image", "") }}
-                                                                                    >
-                                                                                        <em className="icon ni ni-cross-circle-fill" style={{ width: "100px" }}></em>
-                                                                                    </span>
-                                                                                </div>
-                                                                                : <div style={{ border: "2px solid", borderStyle: "dotted", borderRadius: "10px", height: "100px", cursor: "pointer" }} className="d-flex flex-column justify-content-center align-items-center p-2" {...getRootProps()}>
-                                                                                    <input
-                                                                                        type="file"
-                                                                                        accept=".jpg, .png"
-                                                                                        name='image'
-                                                                                        className="form-control form-control-lg"
-                                                                                        id="image"
-                                                                                        {...getInputProps()}
-                                                                                    />
-                                                                                    <span className='preview-icon-wrap'>
-                                                                                        <em className="icon ni ni-upload-cloud"></em>
-                                                                                    </span>
-                                                                                    <p>Drag and drop post image here or click to browse.</p>
-                                                                                </div>}
-                                                                            {addWhatsNewForm.touched.image && addWhatsNewForm.errors.image
-                                                                                ?
-                                                                                <div className="invalid-feedback" style={{ display: "block" }}>{addWhatsNewForm.errors.image}</div>
-                                                                                : ''
-                                                                            }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="col-12">
-                                                                        {btnLoading
-                                                                            ?
-                                                                            <div className="mt-2 mx-4">
-                                                                                <Oval
-                                                                                    height="40"
-                                                                                    width="40"
-                                                                                    color='var(--ps-main)'
-                                                                                    secondaryColor="var(--ps-main)"
-                                                                                    ariaLabel='oval-loading'
-                                                                                    strokeWidth={4}
-                                                                                    strokeWidthSecondary={4}
-                                                                                    visible={true}
-                                                                                />
-                                                                            </div>
-                                                                            :
-                                                                            <div className="mt-2">
-                                                                                <button type="submit" className="btn btn-primary"><em className="icon ni ni-plus" /><span>Add Post</span></button>
-                                                                                <a onClick={e => setAddWhatsNewModal(false)} role='button' className="mx-2 link link-primary">Cancel</a>
-                                                                            </div>
-                                                                        }
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        {/* </div></div></div></div><div className="simplebar-placeholder" style={{ width: 'auto', height: 700 }} /></div> */}
 
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
 
-                                        {/* Edit WhatsNew Post Modal */}
-                                        <div className={editWhatsNewModal ? "modal fade show d-block " : "modal fade"} id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div className="modal-dialog">
-                                                <div className="modal-content">
-                                                    <div className="modal-header">
-                                                        <h1 className="modal-title fs-5" id="exampleModalLabel">Edit What's New Post</h1>
-                                                        <button type="button" onClick={e => { setEditWhatsNewModal(false); setPostImage("") }} className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                                                    </div>
-                                                    <div className="modal-body">
 
-                                                        <div className="nk-block">
-                                                            <form onSubmit={editWhatsNewForm.handleSubmit}>
-                                                                <div className="row g-3">
-                                                                    <div className="col-12">
-                                                                        <div className="form-group">
-                                                                            <label className="form-label" htmlFor="product-title">Post Title</label>
-                                                                            <div className="form-control-wrap">
-                                                                                <input
-                                                                                    type="text"
-                                                                                    name='title'
-                                                                                    {...editWhatsNewForm.getFieldProps("title")}
-                                                                                    className="form-control"
-                                                                                    id="title"
-                                                                                />
-                                                                                {editWhatsNewForm.touched.title && editWhatsNewForm.errors.title
-                                                                                    ?
-                                                                                    <div className="invalid-feedback" style={{ display: "block" }}>{editWhatsNewForm.errors.title}</div>
-                                                                                    : ''
-                                                                                }
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
 
-                                                                    <div className="col-12">
-                                                                        <div className="form-group">
-                                                                            <label className="form-label" htmlFor="product-description">Post Description</label>
-                                                                            <CKEditor
-                                                                                editor={ClassicEditor}
-                                                                                data={editWhatsNewForm.values.description}
-                                                                                onChange={(event, editor) => {
-                                                                                    const data = editor.getData()
-                                                                                    editWhatsNewForm.setFieldValue("description", data)
-                                                                                }}
-                                                                            />
-                                                                            {editWhatsNewForm.touched.description && editWhatsNewForm.errors.description
-                                                                                ?
-                                                                                <div className="invalid-feedback" style={{ display: "block" }}>{editWhatsNewForm.errors.description}</div>
-                                                                                : ''
-                                                                            }
-                                                                        </div>
-                                                                    </div>
 
-                                                                    <div className="col-md-12">
-                                                                        <div className="form-group">
-                                                                            <label className="form-label" htmlFor="regular-price">Post Type</label>
-                                                                            <div className="input-group">
-                                                                                <select
-                                                                                    name="is_default"
-                                                                                    {...editWhatsNewForm.getFieldProps("is_default")}
-                                                                                    className="form-control mb-0"
-                                                                                >
-                                                                                    <option>-- Select Post Visibility --</option>
-                                                                                    <option value='true'>Default</option>
-                                                                                    <option value='false'>Time Limited</option>
-                                                                                </select>
-                                                                                {editWhatsNewForm.touched.is_default && editWhatsNewForm.errors.is_default
-                                                                                    ?
-                                                                                    <div className="invalid-feedback" style={{ display: "block" }}>{editWhatsNewForm.errors.is_default}</div>
-                                                                                    : ''
-                                                                                }
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="col-12">
-                                                                        <div className="form-group ">
-                                                                            <label className="form-label" htmlFor="product-image">Post Image</label>
-                                                                            {postImage
-                                                                                ? <div className='d-flex'>
-                                                                                    {typeof editWhatsNewForm.values.image !== "object"
-                                                                                        ? <img style={{ width: "200px" }} src={postImage} alt="" />
-                                                                                        : <img style={{ width: "200px" }} src={URL.createObjectURL(postImage)} alt="" />
-                                                                                    }
-                                                                                    <span
-                                                                                        className='preview-icon-wrap'
-                                                                                        style={{ position: "relative", right: "10px", bottom: "10px", cursor: "pointer" }}
-                                                                                        ref={imageRef}
-                                                                                        onClick={e => { setPostImage(""); editWhatsNewForm.setFieldValue("image", "") }}
-                                                                                    >
-                                                                                        <em className="icon ni ni-cross-circle-fill" style={{ width: "100px" }}></em>
-                                                                                    </span>
-                                                                                </div>
-                                                                                : <div style={{ border: "2px solid", borderStyle: "dotted", borderRadius: "10px", height: "100px", cursor: "pointer" }} className="d-flex flex-column justify-content-center align-items-center p-2" {...getRootProps()}>
-                                                                                    <input
-                                                                                        type="file"
-                                                                                        accept=".jpg, .png"
-                                                                                        name='image'
-                                                                                        className="form-control form-control-lg"
-                                                                                        id="image"
-                                                                                        {...getInputProps()}
-                                                                                    />
-                                                                                    <span className='preview-icon-wrap'>
-                                                                                        <em className="icon ni ni-upload-cloud"></em>
-                                                                                    </span>
-                                                                                    <p>Drag and drop post image here or click to browse.</p>
-                                                                                </div>}
-                                                                            {editWhatsNewForm.touched.image && editWhatsNewForm.errors.image
-                                                                                ?
-                                                                                <div className="invalid-feedback" style={{ display: "block" }}>{editWhatsNewForm.errors.image}</div>
-                                                                                : ''
-                                                                            }
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="col-12">
-                                                                        {btnLoading
-                                                                            ?
-                                                                            <div className="mt-2 mx-4">
-                                                                                <Oval
-                                                                                    height="40"
-                                                                                    width="40"
-                                                                                    color='var(--ps-main)'
-                                                                                    secondaryColor="var(--ps-main)"
-                                                                                    ariaLabel='oval-loading'
-                                                                                    strokeWidth={4}
-                                                                                    strokeWidthSecondary={4}
-                                                                                    visible={true}
-                                                                                />
-                                                                            </div>
-                                                                            :
-                                                                            <div className="mt-2">
-                                                                                <button type="submit" className="btn btn-primary"><em className="icon ni ni-plus" /><span>Add Post</span></button>
-                                                                                <a onClick={e => { setEditWhatsNewModal(false); setPostImage("") }} role='button' className="mx-2 link link-primary">Cancel</a>
-                                                                            </div>
-                                                                        }
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        {/* </div></div></div></div><div className="simplebar-placeholder" style={{ width: 'auto', height: 700 }} /></div> */}
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Background screen when modal is Open */}
-                                        {(editWhatsNewModal || addWhatsNewModal) && <div className="toggle-overlay"></div>}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     }
-
                 </Container>
             }
         </>
