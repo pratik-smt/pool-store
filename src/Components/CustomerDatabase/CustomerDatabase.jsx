@@ -20,7 +20,6 @@ const CustomerDatabase = () => {
                 <Container>
                     <div className='d-flex justify-content-center align-item-center mt-5'>
                         <h1>CustomerDatabase</h1>
-
                     </div>
                 </Container>
             }
