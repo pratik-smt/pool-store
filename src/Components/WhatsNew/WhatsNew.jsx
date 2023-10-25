@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import * as yup from 'yup'
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Container from '../Layouts/Container';
 import { addWhatsNewPostAPI, deleteWhatsNewPostAPI, editWhatsNewPostAPI, whatsNewAPI } from '../../API/whatsNewRequest';
 import moment from 'moment-timezone';
@@ -270,12 +270,12 @@ const WhatsNew = () => {
                                                 <div className="col-md-10">
                                                     <ul className="nav nav-tabs mt-n3 brBtmNone" role="tablist">
                                                         <li className="nav-item" role="presentation"><a className="nav-link active" data-bs-toggle="tab" href="#tabItem1" aria-selected="true" role="tab">Active Posts <span className="tableTabsSpan"> 23</span></a></li>
-                                                        <li className="nav-item" role="presentation"><a className="nav-link" data-bs-toggle="tab" href="#tabItem2" aria-selected="false" role="tab" tabindex="-1">Posts Expired <span className="tableTabsSpan"> 14</span></a></li>
-                                                        <li className="nav-item" role="presentation"><a className="nav-link" data-bs-toggle="tab" href="#tabItem3" aria-selected="false" role="tab" tabindex="-1">Unfinished <span className="tableTabsSpan"> 35</span></a></li>
+                                                        <li className="nav-item" role="presentation"><a className="nav-link" data-bs-toggle="tab" href="#tabItem2" aria-selected="false" role="tab" tabIndex="-1">Posts Expired <span className="tableTabsSpan"> 14</span></a></li>
+                                                        <li className="nav-item" role="presentation"><a className="nav-link" data-bs-toggle="tab" href="#tabItem3" aria-selected="false" role="tab" tabIndex="-1">Unfinished <span className="tableTabsSpan"> 35</span></a></li>
 
                                                     </ul>
                                                 </div>
-                                                <div className="col-md-2"><a href="#" className="btn btn-primary lightBlue d-md-inline-flex fRight">Add New Post</a></div>
+                                                <div className="col-md-2"><Link to={"/add-new-post"} className="btn btn-primary lightBlue d-md-inline-flex fRight">Add New Post</Link></div>
 
                                                 <div className="col-md-12">
                                                     <div className="tab-content">
@@ -304,23 +304,23 @@ const WhatsNew = () => {
                                                                     <tbody className="tb-odr-body whatSnewTable">
                                                                         {whatsNewData.length > 0 &&
                                                                             whatsNewData.map(data => {
-                                                                                return <tr className="tb-odr-item">
+                                                                                return <tr key={data.id} className="tb-odr-item">
                                                                                     <td className="tb-odr-info">{moment(data.created_at).format("YYYY-MM-DD")}</td>
                                                                                     <td className="tb-odr-info tableImageUser">
                                                                                         <div className="user-card">
                                                                                             <div className="user-avatar user-avatar-sm bg-warning">
-                                                                                                <img src="../images/tableimg.png" alt="" />
+                                                                                                <img src={data.image_icon} alt="Post image" />
                                                                                             </div>
                                                                                             <div className="user-name">
                                                                                                 <span className="tb-lead text-gray">{data.title}</span>
-                                                                                                <p><small className='text-gray'>Buy stabilized chlorinator from our store now at discounted price!!</small></p>
+                                                                                                <p><small className='text-gray'>{data.description}</small></p>
                                                                                             </div>
                                                                                         </div>
                                                                                     </td>
-                                                                                    <td className="tb-odr-info"> 125</td>
-                                                                                    <td className="tb-odr-info">125</td>
-                                                                                    <td className="tb-odr-info">125</td>
-                                                                                    <td className="tb-odr-info">125</td>
+                                                                                    <td className="tb-odr-info">{data?.like > 0 ? data.like : 0}</td>
+                                                                                    <td className="tb-odr-info">{data?.like > 0 ? data.like : 0}</td>
+                                                                                    <td className="tb-odr-info">{data?.share > 0 ? data.share : 0}</td>
+                                                                                    <td className="tb-odr-info">{data?.comment > 0 ? data.comment : 0}</td>
                                                                                     <td className="tb-odr-info">
                                                                                         <a className="text-soft btn btn-icon">
                                                                                             <em className="icon ni ni-eye"></em>
@@ -341,9 +341,7 @@ const WhatsNew = () => {
                                                             </div>
                                                             {whatsNewData.length == 0 &&
                                                                 <div className='d-flex justify-content-center align-item-center mt-5'>
-                                                                    <tr>
-                                                                        <span>No Data Available</span>
-                                                                    </tr>
+                                                                    <span>No Data Available</span>
                                                                 </div>
                                                             }
                                                         </div>

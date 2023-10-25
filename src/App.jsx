@@ -7,6 +7,7 @@ import ChangePassword from './Components/Authentication/ChangePassword';
 import ResetSuccess from './Components/Authentication/ResetSuccess';
 import Profile from './Components/AdminProfile/Profile';
 import WhatsNew from './Components/WhatsNew/WhatsNew';
+import AddNewPost from './Components/WhatsNew/AddNewPost';
 import Sidebar from './Components/Layouts/Sidebar';
 import HomepageBanner from './Components/HomepageBanners/HomepageBanner';
 import Products from './Components/ManageProducts/Products';
@@ -32,11 +33,13 @@ function App() {
 
             {/* SideBar Routes */}
             <Route path='/whats-new' element={<WhatsNew />} />
+            <Route path='/add-new-post' element={<AddNewPost />} />
+
             <Route path='/hompage-banner' element={<HomepageBanner />} />
             <Route path='/customer-database' element={<CustomerDatabase />} />
             <Route path='/manage-products' element={<Products />} />
             <Route path='/manage-orders' element={<ManageOrders />} />
-            <Route path='/chat' element={<Dashboard />} />
+            <Route path='/chat' element={<div>Hello</div>} />
 
             {/* User Routes */}
             <Route path='/profile' element={<Profile />} />
