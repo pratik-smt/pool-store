@@ -281,7 +281,6 @@ const WhatsNew = () => {
                                                                     // console.log({ event, editor, data });
                                                                 }}
                                                             />
-                                                            {/* <textarea className="form-control" placeholder='Short Description'></textarea> */}
                                                         </div>
                                                     </div>
                                                 </div>
