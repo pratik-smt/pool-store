@@ -287,12 +287,12 @@ const WhatsNew = () => {
                                                 </div>
                                                 <div className="col-md-6">
                                                     <div className="form-control-wrap whatNewInput">
-                                                        <div className="form-icon form-icon-right"><em className="icon ni ni-calendar-alt" style={{ fontSize: "1.875rem", marginTop: "0.938rem", marginRight: "0.938rem" }}></em></div>
+                                                        <div className="form-icon form-icon-right"><em className="icon ni ni-calendar-alt" style={{ fontSize: "1.875rem", marginTop: "1rem", marginRight: "1rem" }}></em></div>
                                                         <input type="text" className="form-control form-control-xl form-control-outlined date-picker" id="outlined-date-picker" /></div>
                                                 </div>
                                                 <div className="col-md-6">
                                                     <div className="form-control-wrap has-timepicker whatNewInput">
-                                                        <div className="form-icon form-icon-right"><em className="icon ni ni-clock" style={{ fontSize: "1.875rem", marginTop: "0.938rem", marginRight: "0.938rem" }}></em></div>
+                                                        <div className="form-icon form-icon-right"><em className="icon ni ni-clock" style={{ fontSize: "1.875rem", marginTop: "1rem", marginRight: "1rem" }}></em></div>
                                                         <input type="text" className="form-control form-control-xl form-control-outlined time-picker" id="outlined-time-picker" /></div>
                                                 </div>
 
