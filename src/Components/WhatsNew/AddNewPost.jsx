@@ -36,23 +36,8 @@ const WhatsNew = () => {
         },
     });
 
-    let fetchWhatsNewData = async () => {
-        setSpinnerLoading(true)
-        const config = {
-            headers: { Authorization: `Bearer ${authToken}` }
-        }
-        await whatsNewAPI(config)
-            .then((response) => {
-                setWhatsNewData(response ? response.data ? response.data.data.rows : [] : [])
-            }).catch((err) => {
-                console.log("🚀 ~ file: Profile.jsx:80 ~ err:", err)
-            })
-        setSpinnerLoading(false)
-    }
-
     useEffect(() => {
         !user && navigate('/login')
-        fetchWhatsNewData()
     }, []);
 
     const addWhatsNewForm = useFormik({
@@ -89,8 +74,6 @@ const WhatsNew = () => {
 
                     toast.success(res.data.message)
                     setAddWhatsNewModal(false)
-
-                    fetchWhatsNewData()
 
                 }).catch((err) => {
                     console.log("🚀 ~ file: Profile.jsx:80 ~ err:", err)
@@ -143,8 +126,6 @@ const WhatsNew = () => {
                     toast.success(res.data.message)
                     setEditWhatsNewModal(false)
 
-                    fetchWhatsNewData()
-
                 }).catch((err) => {
                     console.log("🚀 ~ file: Profile.jsx:80 ~ err:", err)
                     if (err.code == "ERR_NETWORK") {
@@ -157,43 +138,6 @@ const WhatsNew = () => {
             setBtnLoading(false)
         }
     })
-
-    const handleDeleteWhatsNew = async (e, id) => {
-
-        e.preventDefault();
-        Swal.fire({
-            title: 'Confirm delete?',
-            text: "Do you really want to delete this post?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Yes, delete it!'
-        }).then(async function (result) {
-            if (result.value) {
-                setSpinnerLoading(true)
-
-                const config = {
-                    headers: { Authorization: `Bearer ${authToken}` }
-                };
-                await deleteWhatsNewPostAPI(id, config)
-                    .then((res) => {
-                        Swal.fire('Deleted!', 'Post has been deleted successfully.', 'success');
-                        toast.success(res.data.message)
-                        fetchWhatsNewData()
-                    }).catch((err) => {
-                        console.log("🚀 ~ file: Profile.jsx:80 ~ err:", err)
-                        if (err.code == "ERR_NETWORK") {
-                            toast.error("Something went wront! please try again later")
-                        }
-                        else {
-                            toast.error(err.response.data.message)
-                        }
-                    })
-                setSpinnerLoading(false)
-            }
-        });
-
-
-    }
 
     return (
         <>
