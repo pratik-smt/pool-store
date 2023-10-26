@@ -17,8 +17,10 @@ const Profile = () => {
     const user = useSelector((state) => state.authReducer.authData)
     const authLoading = useSelector((state) => state.authReducer.authLoading)
     const authToken = useSelector((state) => state.authReducer.token)
-    const [updateProfileModal, setUpdateProfileModal] = useState(false)
     const [spinnerLoading, setSpinnerLoading] = useState(false)
+    const [updateProfileModal, setUpdateProfileModal] = useState(false)
+    const [changePasswordModal, setChangePasswordModal] = useState(false)
+    const [updateAvatarModal, setUpdateAvatardModal] = useState(false)
     const [newAvatar, setNewAvatar] = useState("")
 
     useEffect(() => {
@@ -89,6 +91,7 @@ const Profile = () => {
             await updatePasswordAPI(values, config)
                 .then((res) => {
                     resetForm({ values: "" })
+                    setChangePasswordModal(false)
                     toast.success(res.data.message)
                 }).catch((err) => {
                     console.log("🚀 ~ file: Profile.jsx:80 ~ awaitupdatePasswordAPI ~ err:", err)
@@ -125,6 +128,7 @@ const Profile = () => {
             if (result.success) {
                 resetForm()
                 avatarRef.current.value = ''
+                setUpdateAvatardModal(false)
                 toast.success(result.success)
             }
             else {
@@ -242,9 +246,9 @@ const Profile = () => {
                                                                             <a className="btn btn-icon btn-trigger me-n2" data-bs-toggle="dropdown" href="#"><em className="icon ni ni-more-v" /></a>
                                                                             <div className="dropdown-menu dropdown-menu-end">
                                                                                 <ul className="link-list-opt no-bdr">
-                                                                                    <li><a role="button" data-bs-toggle="modal" data-bs-target="#update-avatar"><em className="icon ni ni-camera-fill" /><span>Change Photo</span></a></li>
-                                                                                    <li><a role="button" onClick={e => setUpdateProfileModal(true)} data-bs-target="#profile-edit" data-tab-target="#address"><em className="icon ni ni-edit-fill" /><span >Update Profile</span></a></li>
-                                                                                    <li><a role="button" data-bs-toggle="modal" data-bs-target="#change-password" data-tab-target="#old_password"><em className="icon ni ni-lock-fill" /><span >Change Password</span></a></li>
+                                                                                    <li><a role="button" onClick={e => setUpdateAvatardModal(true)} data-bs-target="#update-avatar"><em className="icon ni ni-camera-fill" /><span>Change Photo</span></a></li>
+                                                                                    <li><a role="button" onClick={e => setUpdateProfileModal(true)} data-bs-target="#profile-edit" ><em className="icon ni ni-edit-fill" /><span >Update Profile</span></a></li>
+                                                                                    <li><a role="button" onClick={e => setChangePasswordModal(true)} data-bs-target="#change-password"  ><em className="icon ni ni-lock-fill" /><span >Change Password</span></a></li>
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
@@ -435,12 +439,13 @@ const Profile = () => {
                                 </div>{/* .modal-body */}
                             </div>{/* .modal-content */}
                         </div>{/* .modal-dialog */}
-                    </div>{/* .modal */}
+                    </div>
+
                     {/* @@ Change Password Modal @s */}
-                    <div className="modal fade" role="dialog" id="change-password">
+                    <div className={changePasswordModal ? "modal fade show" : "modal fade"} style={{ display: changePasswordModal ? "block" : "none" }} role="dialog" id="change-password">
                         <div className="modal-dialog modal-dialog-centered modal-xs p-0" role="document">
                             <div className="modal-content">
-                                <a href="#" className="close" data-bs-dismiss="modal"><em className="icon ni ni-cross-sm" /></a>
+                                <a href="#" className="close" onClick={e => setChangePasswordModal(false)} ><em className="icon ni ni-cross-sm" /></a>
                                 <div className="modal-body modal-body-lg">
                                     <h5 className="title">Change Password</h5>
                                     <ul className="nav-tabs mt-3"></ul>
@@ -521,7 +526,7 @@ const Profile = () => {
                                                                     <button type='submit' className="btn btn-lg btn-primary">Change Password</button>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="#" data-bs-dismiss="modal" className="link link-primary">Cancel</a>
+                                                                    <a href="#" onClick={e => setChangePasswordModal(false)} className="link link-primary">Cancel</a>
                                                                 </li>
                                                             </ul>
                                                         }
@@ -533,12 +538,13 @@ const Profile = () => {
                                 </div>{/* .modal-body */}
                             </div>{/* .modal-content */}
                         </div>{/* .modal-dialog */}
-                    </div>{/* .modal */}
+                    </div>
+
                     {/* @@ Avatar Update Modal @s */}
-                    <div className="modal fade" role="dialog" id="update-avatar">
+                    <div className={updateAvatarModal ? "modal fade show" : "modal fade"} style={{ display: updateAvatarModal ? "block" : "none" }} role="dialog" id="update-avatar">
                         <div className="modal-dialog modal-dialog-centered modal-xs p-0" role="document">
                             <div className="modal-content">
-                                <a href="#" className="close" data-bs-dismiss="modal"><em className="icon ni ni-cross-sm" /></a>
+                                <a href="#" className="close" onClick={e => setUpdateAvatardModal(false)} ><em className="icon ni ni-cross-sm" /></a>
                                 <div className="modal-body modal-body-lg">
                                     <h5 className="title">Update Avatar</h5>
                                     <ul className="nav-tabs mt-3"></ul>
@@ -584,7 +590,7 @@ const Profile = () => {
                                                                     <button type='submit' data-bs-dismiss="modal" className="btn btn-lg btn-primary">Save Change</button>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="#" data-bs-dismiss="modal" className="link link-primary">Cancel</a>
+                                                                    <a href="#" onClick={e => setUpdateAvatardModal(false)} className="link link-primary">Cancel</a>
                                                                 </li>
                                                             </ul>
                                                         }

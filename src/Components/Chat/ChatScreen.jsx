@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import Container from '../Layouts/Container';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Container from '../Layouts/Container';
 
-const ManageOrders = () => {
+const ChatScreen = () => {
 
     const navigate = useNavigate()
     const user = useSelector((state) => state.authReducer.authData)
@@ -19,7 +19,7 @@ const ManageOrders = () => {
             {user &&
                 <Container>
                     <h1 className='mt-5'>
-                        ManageOrders
+                        Chat Screen
                     </h1>
                 </Container>
             }
@@ -27,4 +27,4 @@ const ManageOrders = () => {
     );
 }
 
-export default ManageOrders;
+export default ChatScreen;

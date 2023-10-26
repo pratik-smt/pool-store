@@ -89,6 +89,7 @@ const Login = () => {
                                                     <div className="form-control-wrap">
                                                         <a onClick={() => setToggle(!toggle)} className="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                             <em className={!toggle ? "passcode-icon icon ni icon-show  ni-eye-off" : "passcode-icon icon ni icon-hide  ni-eye"} />
+                                                            {/* <em className="passcode-icon icon ni icon-show  ni-eye" /> */}
                                                         </a>
                                                         <input
                                                             type={toggle ? "text" : "password"}

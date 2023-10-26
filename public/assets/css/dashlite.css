@@ -25,6 +25,7 @@
 ---------------------- **/
 /** 01. FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 /** Bootstrap v5.3.0 */
 /*!
  * Bootstrap  v5.3.0 (https://getbootstrap.com/)
@@ -2478,12 +2479,12 @@ div.dataTables_wrapper div.dataTables_filter input[type=file]:not(:disabled):not
 .form-control:focus,
 .dual-listbox .dual-listbox__search:focus,
 div.dataTables_wrapper div.dataTables_filter input:focus {
-    color: #3c4d62;
-    background-color: #fff;
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-    border-bottom: 4px solid #54E28D;
+  color: #3c4d62;
+  background-color: #fff;
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+  border-bottom: 4px solid #54E28D;
 }
 
 .form-control::-webkit-date-and-time-value,
@@ -18856,7 +18857,7 @@ a:hover .btn-trigger:before {
 @media (min-width: 576px) {
   .card-inner {
     padding: 15px;
-}
+  }
 
   .card-inner-sm {
     padding-top: 0.75rem;
@@ -23847,6 +23848,7 @@ div.dataTables_wrapper div.dataTables_length select {
 
 .ni-menu:before {
   content: "\eaec";
+  font-size: 1.875rem;
 }
 
 .ni-trend-up:before {
@@ -27427,7 +27429,7 @@ ol.linenums li {
 .dropzone .dz-message-or {
   font-size: 16px;
   margin-bottom: 4px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .dropzone .dz-preview {
@@ -34697,6 +34699,7 @@ body.nav-shown {
 .logo-img-lg {
   max-height: 150px;
 }
+
 .logo-img-sm {
   max-height: 150px;
 }
@@ -34727,6 +34730,7 @@ body.nav-shown {
 
 .nk-header.is-light:not([class*=bg-]) {
   background: #004BA7;
+  border-bottom: 1px solid #004BA7;
 }
 
 .nk-header.is-theme:not([class*=bg-]) {
@@ -34835,9 +34839,11 @@ div.dataTables_wrapper div.dataTables_filter .nk-header-search input,
   color: #ffffff;
   padding: 0.375rem;
 }
+
 .nk-quick-nav-icon:hover {
   color: #ffffff;
 }
+
 .is-dark .nk-quick-nav-icon {
   color: #9faec2;
 }
@@ -34864,7 +34870,7 @@ div.dataTables_wrapper div.dataTables_filter .nk-header-search input,
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
   content: "";
-  color:#fff;
+  color: #fff;
   opacity: 0;
   transition: all 0.3s;
 }
@@ -35222,7 +35228,7 @@ div.dataTables_wrapper div.dataTables_filter .nk-header-search input,
   padding: 14px 24px;
   min-width: 100%;
   width: 290px;
-  height: 73px;
+  height: 77px;
   background: #004BA7;
 }
 
@@ -37462,6 +37468,7 @@ select:-webkit-autofill:focus {
   font-weight: 700;
   color: #004ba7;
 }
+
 .page-title span {
   font-size: 18px;
   font-weight: 400;
@@ -50703,66 +50710,80 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   align-items: center;
   padding: 30px 0px;
 }
+
 .greyColor {
-  color:#8E8E8E !important;
+  color: #8E8E8E !important;
 }
+
 .LoginBoxBlue {
   background-color: #004BA7;
-  border:3px solid #004BA7;
+  border: 3px solid #004BA7;
   border-radius: 5px;
   padding: 0px;
   text-align: center;
 }
-.loginTextBlueBox{
+
+.loginTextBlueBox {
   margin-bottom: 40px;
 }
+
 .loginTextBlueBox h2 {
-  font-size:26px;
-  font-weight:600;
+  font-size: 26px;
+  font-weight: 600;
   margin-top: 0px;
-  color:#fff;
+  color: #fff;
 }
+
 .loginTextBlueBox h6 {
-  font-size:16px;
-  font-weight:500;
+  font-size: 16px;
+  font-weight: 500;
   margin-top: 0px;
-  color:#fff;
+  color: #fff;
 }
+
 .fSize28 {
-  font-size:28px;
+  font-size: 28px;
 }
+
 .nk-header-search .ni-search {
   color: #fff;
 }
+
 .chartOne {
   background: #E3F5FF;
   border-radius: 15px;
 }
+
 .change.up.fontsize {
   font-size: 13px;
   font-weight: 600;
 }
+
 .chartOneWhite {
   background: #F7F9FB;
   border-radius: 15px;
 }
-.chartOnegrey{
+
+.chartOnegrey {
   background: #E5ECF6;
 }
+
 .revenueBoxColor {
-  background:#F7F9FB;
+  background: #F7F9FB;
   border-radius: 15px;
 }
 
 .revenurTitlerow {
-   display: flex;
-   justify-content: space-between;
-   width: 80%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
+
 .rLine {
-    border-right: 1px solid #00000061;
-    padding-right: 15px;
+  border-right: 1px solid #00000061;
+  padding-right: 15px;
 }
+
 .currentWeek {
   font-size: 12px;
   padding-left: 20px;
@@ -50770,6 +50791,7 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   height: 23px;
   line-height: 24px;
 }
+
 .currentWeek .icon {
   font-size: 28px;
   position: absolute;
@@ -50779,6 +50801,7 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   left: -8px;
   color: #1C1C1C;
 }
+
 .previousWeek {
   font-size: 12px;
   padding-left: 20px;
@@ -50786,6 +50809,7 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   height: 23px;
   line-height: 24px;
 }
+
 .previousWeek .icon {
   font-size: 28px;
   position: absolute;
@@ -50793,16 +50817,22 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   height: 0px;
   display: inline-block;
   left: -8px;
-  color: #1A8C5DA;
+  color: #1A8C5D;
 }
+
 .circleChartFlex {
   display: flex;
   justify-content: space-between;
 }
-.fillRevnue { background-color: #A8C5DA; }
+
+.fillRevnue {
+  background-color: #A8C5DA;
+}
+
 .progress-md-Revnue {
   height: 3px;
 }
+
 .searchBarTable .form-control:focus {
   border-bottom: 1px solid #dbdfea;
 }
@@ -50817,5 +50847,179 @@ div.dataTables_wrapper div.dataTables_filter .dark-mode .nk-header-search input,
   background: #004ba7;
   margin-top: 20px;
 }
+
+.nk-content {
+  margin-top: 50px;
+  position: relative;
+  background: #fff;
+}
+
+.text-grey {
+  color: #000;
+}
+
+.slectDraftBnt {
+  background: #1C1D22;
+  color: #fff;
+}
+
+.lightBlue {
+  background-color: #5570F1;
+  border-color: #5570F1;
+}
+
+.whatNewInput input {
+  background: #efefef;
+  color: #000;
+}
+
+.whatNewInput input:focus {
+  border-bottom: 1px solid #004BA7;
+  border: 1px solid #004BA7;
+}
+
+.whatNewInput textarea {
+  background: #efefef;
+  color: #000;
+}
+
+.whatNewInput textarea:focus {
+  border-bottom: 1px solid #004BA7;
+  border: 1px solid #004BA7;
+}
+
+.discountExpireBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgUploadIcon {
+  margin: 0px auto;
+  display: block;
+}
+
+.uploadTxt {
+  display: flex;
+  text-align: center;
+  margin: 0px auto;
+  color: #004ba7;
+}
+
+.uploadTxt-small {
+  display: flex;
+  text-align: center;
+  margin: 0px auto;
+  color: #004ba7;
+  font-size: 12px;
+}
+
+.smallBoxUpload .dz-message {
+  /* display: none; */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.smallBoxUpload {
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  padding-top: 30px;
+  min-height: 150px;
+  position: relative;
+}
+
+.filterBnt {
+  background: #F7F9FB;
+  border: 1px solid #F7F9FB;
+}
+
+.thiryday {
+  background: #F7F9FB;
+  border: 1px solid #F7F9FB;
+  padding: 5px 15px;
+  border-radius: 5px;
+  height: 36px;
+  color: #343352;
+  margin-right: 10px;
+}
+
+.tableTabsSpan {
+  background: #F7F9FB;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.brBtmNone {
+  border-bottom: none;
+}
+
+.fRight {
+  float: right;
+}
+
+.whatSnewTable .tb-odr-item td {
+  padding-left: 1.25rem !important;
+}
+
+.tableImageUser .user-card {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  white-space: normal;
+}
+
+.tableImageUser .user-avatar {
+  border-radius: 0%;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tableImageUser .user-avatar img {
+  border-radius: 0%;
+}
+
+.tableImageUser .user-name {
+  color: #000;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.tableImageUser .user-name .tb-lead {
+  margin-bottom: 5px;
+  display: block;
+}
+
+
+@media (max-width: 680px) {
+  .nk-header-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .logo-img {
+    max-height: 70px;
+  }
+}
+
+
 
 /*! END @iO */

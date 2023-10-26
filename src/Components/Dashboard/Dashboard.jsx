@@ -189,7 +189,7 @@ const Dashboard = () => {
                                             <div className="col-md-7">
                                                 <div className="card revenueBoxColor">
                                                     <div className="card-inner">
-                                                        <div class="card-title-group mt-n1 mb-3">
+                                                        <div className="card-title-group mt-n1 mb-3">
                                                             <div className="revenurTitlerow">
                                                                 <h5 className="rLine">Revenue</h5>
                                                                 <span className="currentWeek"><em className="icon ni ni-dot"></em> Current Week $58,211</span>
@@ -253,10 +253,10 @@ const Dashboard = () => {
                                                             <div className="card-inner circleChartFlex">
                                                                 <div className="revenuChartLocation">
                                                                     <h6>Revenue by Location</h6>
-                                                                    <ul class="nk-ecwg4-legends pt-0">
-                                                                        <li><div class="title"><span class="dot dot-lg sq" data-bg="#9cabff"></span><span>Direct Search</span></div><div class="amount amount-xs">$300.56</div></li>
-                                                                        <li><div class="title"><span class="dot dot-lg sq" data-bg="#ffa9ce"></span><span>Affilliate</span></div><div class="amount amount-xs">$135.18</div></li>
-                                                                        <li><div class="title"><span class="dot dot-lg sq" data-bg="#b8acff"></span><span>E-mail</span></div><div class="amount amount-xs">$48.96</div></li>
+                                                                    <ul className="nk-ecwg4-legends pt-0">
+                                                                        <li><div className="title"><span className="dot dot-lg sq" data-bg="#9cabff"></span><span>Direct Search</span></div><div className="amount amount-xs">$300.56</div></li>
+                                                                        <li><div className="title"><span className="dot dot-lg sq" data-bg="#ffa9ce"></span><span>Affilliate</span></div><div className="amount amount-xs">$135.18</div></li>
+                                                                        <li><div className="title"><span className="dot dot-lg sq" data-bg="#b8acff"></span><span>E-mail</span></div><div className="amount amount-xs">$48.96</div></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div className="circleChartSmall">
@@ -283,11 +283,11 @@ const Dashboard = () => {
                                                         <h6>Top selling products</h6>
                                                     </div>
 
-                                                    <div class="drodown">
-                                                        <a href="#" class="dropdown-toggle btn btn-outline-light btn-white" data-bs-toggle="dropdown" aria-expanded="false">Filter
-                                                            <em class="icon ni ni-filter-alt"></em></a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <ul class="link-list-opt no-bdr">
+                                                    <div className="drodown">
+                                                        <a href="#" className="dropdown-toggle btn btn-outline-light btn-white" data-bs-toggle="dropdown" aria-expanded="false">Filter
+                                                            <em className="icon ni ni-filter-alt"></em></a>
+                                                        <div className="dropdown-menu dropdown-menu-end">
+                                                            <ul className="link-list-opt no-bdr">
                                                                 <li><a href="#"><span>- Price Low to high</span></a></li>
                                                                 <li><a href="#"><span>- Price High to Low</span></a></li>
                                                             </ul>
@@ -328,14 +328,14 @@ const Dashboard = () => {
                                                                 <td className="tb-odr-amount">$150.00</td>
                                                                 <td className="tb-odr-amount"> 125</td>
                                                                 <td className="tb-odr-amount">$150.00</td>
-                                                                <td class="tb-odr-action">
-                                                                    <div class="dropdown">
-                                                                        <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em class="icon ni ni-more-v"></em></a>
-                                                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xs">
-                                                                            <ul class="link-list-plain">
-                                                                                <li><a href="#" class="text-primary">Edit</a></li>
-                                                                                <li><a href="#" class="text-primary">View</a></li>
-                                                                                <li><a href="#" class="text-danger">Remove</a></li>
+                                                                <td className="tb-odr-action">
+                                                                    <div className="dropdown">
+                                                                        <a className="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em className="icon ni ni-more-v"></em></a>
+                                                                        <div className="dropdown-menu dropdown-menu-end dropdown-menu-xs">
+                                                                            <ul className="link-list-plain">
+                                                                                <li><a href="#" className="text-primary">Edit</a></li>
+                                                                                <li><a href="#" className="text-primary">View</a></li>
+                                                                                <li><a href="#" className="text-danger">Remove</a></li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
@@ -346,14 +346,14 @@ const Dashboard = () => {
                                                                 <td className="tb-odr-amount">$150.00</td>
                                                                 <td className="tb-odr-amount"> 125</td>
                                                                 <td className="tb-odr-amount">$150.00</td>
-                                                                <td class="tb-odr-action">
-                                                                    <div class="dropdown">
-                                                                        <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em class="icon ni ni-more-v"></em></a>
-                                                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xs">
-                                                                            <ul class="link-list-plain">
-                                                                                <li><a href="#" class="text-primary">Edit</a></li>
-                                                                                <li><a href="#" class="text-primary">View</a></li>
-                                                                                <li><a href="#" class="text-danger">Remove</a></li>
+                                                                <td className="tb-odr-action">
+                                                                    <div className="dropdown">
+                                                                        <a className="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em className="icon ni ni-more-v"></em></a>
+                                                                        <div className="dropdown-menu dropdown-menu-end dropdown-menu-xs">
+                                                                            <ul className="link-list-plain">
+                                                                                <li><a href="#" className="text-primary">Edit</a></li>
+                                                                                <li><a href="#" className="text-primary">View</a></li>
+                                                                                <li><a href="#" className="text-danger">Remove</a></li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
@@ -364,14 +364,14 @@ const Dashboard = () => {
                                                                 <td className="tb-odr-amount">$150.00</td>
                                                                 <td className="tb-odr-amount"> 125</td>
                                                                 <td className="tb-odr-amount">$150.00</td>
-                                                                <td class="tb-odr-action">
-                                                                    <div class="dropdown">
-                                                                        <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em class="icon ni ni-more-v"></em></a>
-                                                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xs">
-                                                                            <ul class="link-list-plain">
-                                                                                <li><a href="#" class="text-primary">Edit</a></li>
-                                                                                <li><a href="#" class="text-primary">View</a></li>
-                                                                                <li><a href="#" class="text-danger">Remove</a></li>
+                                                                <td className="tb-odr-action">
+                                                                    <div className="dropdown">
+                                                                        <a className="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown" data-offset="-8,0" aria-expanded="false"><em className="icon ni ni-more-v"></em></a>
+                                                                        <div className="dropdown-menu dropdown-menu-end dropdown-menu-xs">
+                                                                            <ul className="link-list-plain">
+                                                                                <li><a href="#" className="text-primary">Edit</a></li>
+                                                                                <li><a href="#" className="text-primary">View</a></li>
+                                                                                <li><a href="#" className="text-danger">Remove</a></li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
