@@ -101,6 +101,7 @@ const WhatsNew = () => {
                         toast.error(err.response.data.message)
                     }
                 })
+
             setBtnLoading(false)
         }
     })
