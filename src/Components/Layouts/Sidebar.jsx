@@ -58,8 +58,8 @@ const Sidebar = () => {
                                     <span className="nk-menu-text">Homepage Banner</span>
                                 </Link>
                             </li>
-                            <li className={currentLocation == "/users" ? "nk-menu-item active current-page" : "nk-menu-item"}>
-                                <Link to={"/users"} className="nk-menu-link">
+                            <li className={currentLocation == "/customer-database" ? "nk-menu-item active current-page" : "nk-menu-item"}>
+                                <Link to={"/customer-database"} className="nk-menu-link">
                                     <span className="nk-menu-icon"><em className="icon ni ni-user-group-fill" /></span>
                                     <span className="nk-menu-text">Customer Database</span>
                                 </Link>

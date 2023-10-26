@@ -12,7 +12,8 @@ import Sidebar from './Components/Layouts/Sidebar';
 import HomepageBanner from './Components/HomepageBanners/HomepageBanner';
 import Products from './Components/ManageProducts/Products';
 import ManageOrders from './Components/ManageOrders/ManageOrders';
-import CustomerDatabase from './Components/CustomerDatabase/CustomerDatabase';
+import CustomerDatabase from './Components/Customer/CustomerDatabase';
+import ChatScreen from './Components/Chat/ChatScreen';
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
             <Route path='/customer-database' element={<CustomerDatabase />} />
             <Route path='/manage-products' element={<Products />} />
             <Route path='/manage-orders' element={<ManageOrders />} />
-            <Route path='/chat' element={<div>Hello</div>} />
+            <Route path='/chat' element={<ChatScreen />} />
 
             {/* User Routes */}
             <Route path='/profile' element={<Profile />} />
