@@ -328,7 +328,7 @@ const WhatsNew = () => {
                                                                                         <a className="text-soft btn btn-icon">
                                                                                             <em className="icon ni ni-edit"></em>
                                                                                         </a>
-                                                                                        <a className="text-soft btn btn-icon">
+                                                                                        <a onClick={e => handleDeleteWhatsNew(e, data.id)} className="text-soft btn btn-icon">
                                                                                             <em className="icon ni ni-trash-empty"></em>
                                                                                         </a>
                                                                                     </td>
@@ -346,14 +346,39 @@ const WhatsNew = () => {
                                                             }
                                                         </div>
 
+
+                                                        <div class="tab-pane" id="tabItem2" role="tabpanel">
+                                                            <div className="row">
+                                                                <div className="col-lg-12">
+                                                                    <h1>TAB 2</h1>
+                                                                    {whatsNewData.length == 0
+                                                                        && <div className='mt-5 d-flex justify-content-center align-item-center'>
+                                                                            <h6>No Data Available</h6>
+                                                                        </div>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="tab-pane" id="tabItem3" role="tabpanel">
+                                                            <div className="row">
+                                                                <div className="col-lg-12">
+                                                                    <h1>TAB 3</h1>
+                                                                    {whatsNewData.length == 0
+                                                                        && <div className='mt-5 d-flex justify-content-center align-item-center'>
+                                                                            <h6>No Data Available</h6>
+                                                                        </div>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
 
                                             </div>
                                         </div>
-
-
-
 
                                     </div>
                                 </div>
