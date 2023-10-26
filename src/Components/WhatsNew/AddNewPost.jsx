@@ -105,6 +105,7 @@ const WhatsNew = () => {
             is_default: yup.string().required('Post type is required'),
         }),
         onSubmit: async (values, { resetForm }) => {
+
             setBtnLoading(true)
 
             const formData = new FormData();
