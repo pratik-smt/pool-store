@@ -52,10 +52,10 @@ const Sidebar = () => {
                                     <span className="nk-menu-text">What's New</span>
                                 </Link>
                             </li>
-                            <li className={currentLocation == "/hompage-banner" ? "nk-menu-item active current-page" : "nk-menu-item"}>
-                                <Link to={"/hompage-banner"} className="nk-menu-link">
+                            <li className={currentLocation == "/onboarding-screen" ? "nk-menu-item active current-page" : "nk-menu-item"}>
+                                <Link to={"/onboarding-screen"} className="nk-menu-link">
                                     <span className="nk-menu-icon"><em className="icon ni ni-folder-fill" /></span>
-                                    <span className="nk-menu-text">Homepage Banner</span>
+                                    <span className="nk-menu-text">Onboarding Screen</span>
                                 </Link>
                             </li>
                             <li className={currentLocation == "/customer-database" ? "nk-menu-item active current-page" : "nk-menu-item"}>

@@ -6,6 +6,7 @@ import { useFormik } from 'formik';
 import webLogo from '../../images/poolStoreLogo.avif'
 import * as yup from 'yup'
 import { changePasswordAPI } from '../../API/authRequest';
+import SideScreen from './SideScreen';
 
 const ChangePassword = () => {
 
@@ -120,28 +121,7 @@ const ChangePassword = () => {
 
 
                                 <div className="col-md-6">
-                                    <div className="LoginBoxBlue">
-                                        <div className="brand-logo pb-4 text-center">
-                                            <a href="" className="logo-link">
-                                                <img className="logo-light logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo" />
-                                                <img className="logo-dark logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo-dark" />
-                                            </a>
-                                        </div>
-                                        <div className="loginTextBlueBox">
-                                            <h2>Explore What’s new</h2>
-                                            <h6>Get the latest updates on new products and deals!</h6>
-                                        </div>
-                                        <div className="loginTextBlueBox">
-                                            <h2>Enter The Store</h2>
-                                            <h6>Check out the entire store!</h6>
-                                        </div>
-                                        <div className="loginTextBlueBox">
-                                            <h2>Discount</h2>
-                                            <h6>Get exclusive deals on select products!</h6>
-                                        </div>
-                                        <img className="" src="./images/wavebtm-img.png" alt="waveimg" />
-
-                                    </div>
+                                    <SideScreen />
                                 </div>
 
                             </div>

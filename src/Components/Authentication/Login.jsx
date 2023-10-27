@@ -6,6 +6,7 @@ import * as yup from 'yup'
 import { loginToAdmin } from '../../Action/authAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import SideScreen from './SideScreen';
 
 const Login = () => {
 
@@ -105,8 +106,8 @@ const Login = () => {
                                                     <div className="form-label-group mt-3">
 
                                                         <div class="custom-control custom-control-sm custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="com-email-1" />
-                                                            <label class="custom-control-label" for="com-email-1">Remember me?</label>
+                                                            {/* <input type="checkbox" class="custom-control-input" id="com-email-1" />
+                                                            <label class="custom-control-label" for="com-email-1">Remember me?</label> */}
                                                         </div>
                                                         <Link
                                                             to={'/forget-password'}
@@ -116,7 +117,7 @@ const Login = () => {
                                                         </Link>
                                                     </div>
                                                 </div>
-                                                <div className="form-group justify-center mt-5">
+                                                <div className="form-group justify-center mt-3">
                                                     {spinnerLoading
                                                         ? <Oval
                                                             height="40"
@@ -138,28 +139,7 @@ const Login = () => {
 
 
                                 <div className="col-md-6">
-                                    <div className="LoginBoxBlue">
-                                        <div className="brand-logo pb-4 text-center">
-                                            <a href="" className="logo-link">
-                                                <img className="logo-light logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo" />
-                                                <img className="logo-dark logo-img logo-img-lg" src="./images/poolstore-logo.png" alt="logo-dark" />
-                                            </a>
-                                        </div>
-                                        <div className="loginTextBlueBox">
-                                            <h2>Explore What’s new</h2>
-                                            <h6>Get the latest updates on new products and deals!</h6>
-                                        </div>
-                                        <div className="loginTextBlueBox">
-                                            <h2>Enter The Store</h2>
-                                            <h6>Check out the entire store!</h6>
-                                        </div>
-                                        <div className="loginTextBlueBox">
-                                            <h2>Discount</h2>
-                                            <h6>Get exclusive deals on select products!</h6>
-                                        </div>
-                                        <img className="" src="images/wavebtm-img.png" alt="waveimg" />
-
-                                    </div>
+                                    <SideScreen />
                                 </div>
 
 

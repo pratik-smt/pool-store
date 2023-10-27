@@ -9,11 +9,12 @@ import Profile from './Components/AdminProfile/Profile';
 import WhatsNew from './Components/WhatsNew/WhatsNew';
 import AddNewPost from './Components/WhatsNew/AddNewPost';
 import Sidebar from './Components/Layouts/Sidebar';
-import HomepageBanner from './Components/HomepageBanners/HomepageBanner';
+import OnboardingScreen from './Components/Onboarding/OnboardingScreen';
 import Products from './Components/ManageProducts/Products';
 import ManageOrders from './Components/ManageOrders/ManageOrders';
 import CustomerDatabase from './Components/Customer/CustomerDatabase';
 import ChatScreen from './Components/Chat/ChatScreen';
+import AddOnbordingScreen from './Components/Onboarding/AddOnbordingScreen';
 
 function App() {
 
@@ -36,7 +37,9 @@ function App() {
             <Route path='/whats-new' element={<WhatsNew />} />
             <Route path='/add-new-post' element={<AddNewPost />} />
 
-            <Route path='/hompage-banner' element={<HomepageBanner />} />
+            <Route path='/onboarding-screen' element={<OnboardingScreen />} />
+            <Route path='/add-onboarding-screen' element={<AddOnbordingScreen />} />
+
             <Route path='/customer-database' element={<CustomerDatabase />} />
             <Route path='/manage-products' element={<Products />} />
             <Route path='/manage-orders' element={<ManageOrders />} />
